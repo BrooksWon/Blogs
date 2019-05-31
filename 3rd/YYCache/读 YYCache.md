@@ -66,7 +66,7 @@
 
 ### 思维导图
 
-![思维导图](/Users/Brooks/blog/blogs/3rd/YYCache/YYCache.png)
+![思维导图](https://github.com/BrooksWon/Blogs/blob/master/3rd/YYCache/YYCache.png)
 
 - `YYCache`：最外层接口，调用了`YYMemoryCache`与`YYDiskCache`的相关方法。
 - `YYMemoryCache`：负责处理容量小，相对高速的内存缓存。线程安全，支持自动和手动清理缓存等功能。
@@ -78,7 +78,7 @@
 
 ### 类图
 
-![UML类图]()![UML类图](https://github.com/BrooksWon/Blogs/blob/master/3rd/YYCache/Main.jpg)
+![UML类图](https://github.com/BrooksWon/Blogs/blob/master/3rd/YYCache/Main.jpg)
 
 ## 源码分析
 
