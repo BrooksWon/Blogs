@@ -499,30 +499,7 @@ typedef NS_ENUM(uint8_t, _FBKVOInfoState) {
 @property (nullable) NSString * __nullable (*descriptionFunction)(const void *item);
 ```
 
-在`FBKVOController`自定义的可以作为key的结构`FBKVOInfo`，就复写了
-
-```
-- (NSUInteger)hash
-{
-  return [_keyPath hash];
-}
-
-- (BOOL)isEqual:(id)object
-{
-  if (nil == object) {
-    return NO;
-  }
-  if (self == object) {
-    return YES;
-  }
-  if (![object isKindOfClass:[self class]]) {
-    return NO;
-  }
-  return [_keyPath isEqualToString:((_FBKVOInfo *)object)->_keyPath];
-}
-```
-
-
+这块具体可查看[NSHashTable&NSMapTable](https://nshipster.cn/nshashtable-and-nsmaptable/)
 
 ### __builtin_ctzl
 
