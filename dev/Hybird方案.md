@@ -282,7 +282,7 @@ UIWebView可以通过KVC的方法，直接拿到整个WebView当前所拥有的J
 
 UI样式就这个样子：
 
-![](Untitled-29a415b3-1712-4ea5-b581-cfb83b6817bc.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/dev/Untitled-29a415b3-1712-4ea5-b581-cfb83b6817bc.png)
 
 这个Html5页面非常简单，就4个按钮分别描述了本框架的核心功能，JS调用Native部分基本覆盖，对应的JS脚本如下：
 
@@ -474,6 +474,11 @@ UI样式就这个样子：
 ## Cookie管理
 
 Cookie作为Web端本地储存数据的重要方式之一，其作用不言而喻。在设计中Android平台主要涉及到Cookie同步的问题，关于如何处理Cookie同步问题请参考【[Cookie同步](https://www.jianshu.com/p/c9a9c4e1756d)】。本案例中，我们使用Native层提供存储api的方式来代替Cookie机制，原理同JS调用Native一样。
+
+## Demo
+
+- [Android-demo](https://github.com/BrooksWon/wby/tree/master/Hybird/Android/JSBridge)
+- [iOS-demo](https://github.com/BrooksWon/wby/tree/master/Hybird/iOS/BTJSBridge)
 
 ## 参考
 
