@@ -229,7 +229,7 @@ UIWebView可以通过KVC的方法，直接拿到整个WebView当前所拥有的J
 - 通讯编码
 - JS框架应该具备处理native侧生命周期的能力。比如：App切换到前台。【具体的业务处理，JS框架层可以交给JS业务开发处理即可，就像native开发中的生命周期模板方法一样】
 
-以上就是对我们的Hybird框架的基本期望，接下来我们看看如何实现吧。备注：本次案例我们以Android实现来做分析，iOS实现部分请参考[「案例」](http://awhisper.github.io/2018/03/06/hybrid-webcontainer/)。
+以上就是对我们的Hybird框架的基本期望，接下来我们看看如何实现吧。
 
 ### 通讯协议
 
