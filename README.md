@@ -16,9 +16,9 @@
 2. [APP组件化设计](https://github.com/BrooksWon/Blogs/blob/master/dev/APP%E7%BB%84%E4%BB%B6%E5%8C%96%E8%AE%BE%E8%AE%A1.md)
 3. [Cocoapods 私有库制作](https://github.com/BrooksWon/Blogs/blob/master/dev/Cocoapods%20%E7%A7%81%E6%9C%89%E5%BA%93%E5%88%B6%E4%BD%9C.md)
 4. [利用fastlane脚本化发布CocoaPods私有化组件](https://github.com/BrooksWon/Blogs/blob/master/dev/%E5%88%A9%E7%94%A8fastlane%E8%84%9A%E6%9C%AC%E5%8C%96%E5%8F%91%E5%B8%83CocoaPods%E7%A7%81%E6%9C%89%E5%8C%96%E7%BB%84%E4%BB%B6.md)
+5. 从0到1开发一个Hybird框架
 
 ## 团队管理思考
 
 1. [Mentor机制](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83%E4%B9%8BMentor%E6%9C%BA%E5%88%B6.md)
 2. [需求IO机制](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83%E4%B9%8B%E9%9C%80%E6%B1%82IO%E6%9C%BA%E5%88%B6.md)
-
