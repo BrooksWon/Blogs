@@ -21,7 +21,7 @@
 ## 设计模式
 
 1. [面向对象设计的六大原则](https://github.com/BrooksWon/Blogs/blob/master/Object-oriented%20design%20pattern/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/README.md)
-2. [面向对象设计模式](https://github.com/BrooksWon/Blogs/blob/master/Object-oriented%20design%20pattern/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/README.md)
+2. [面向对象设计模式](https://github.com/BrooksWon/Blogs/blob/master/Object-oriented%20design%20pattern/README.md)
 
 ## 团队管理思考
 
