@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		987633B822969F9600CF45BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 987633B722969F9600CF45BD /* main.m */; };
+		987633C022969FA100CF45BD /* HomeDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 987633BF22969FA100CF45BD /* HomeDevice.m */; };
+		987633C322969FCC00CF45BD /* AirConditioner.m in Sources */ = {isa = PBXBuildFile; fileRef = 987633C222969FCC00CF45BD /* AirConditioner.m */; };
+		987633C622969FE700CF45BD /* CDPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 987633C522969FE700CF45BD /* CDPlayer.m */; };
+		987633C922969FFC00CF45BD /* DVDPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 987633C822969FFC00CF45BD /* DVDPlayer.m */; };
+		987633CC2296A02100CF45BD /* VoiceBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 987633CB2296A02100CF45BD /* VoiceBox.m */; };
+		987633CF2296A04200CF45BD /* Projecter.m in Sources */ = {isa = PBXBuildFile; fileRef = 987633CE2296A04200CF45BD /* Projecter.m */; };
+		987633D22296A05F00CF45BD /* HomeDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 987633D12296A05F00CF45BD /* HomeDeviceManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		987633B222969F9600CF45BD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		987633B422969F9600CF45BD /* 外观模式 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "外观模式"; sourceTree = BUILT_PRODUCTS_DIR; };
+		987633B722969F9600CF45BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		987633BE22969FA100CF45BD /* HomeDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDevice.h; sourceTree = "<group>"; };
+		987633BF22969FA100CF45BD /* HomeDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDevice.m; sourceTree = "<group>"; };
+		987633C122969FCC00CF45BD /* AirConditioner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirConditioner.h; sourceTree = "<group>"; };
+		987633C222969FCC00CF45BD /* AirConditioner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirConditioner.m; sourceTree = "<group>"; };
+		987633C422969FE700CF45BD /* CDPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDPlayer.h; sourceTree = "<group>"; };
+		987633C522969FE700CF45BD /* CDPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDPlayer.m; sourceTree = "<group>"; };
+		987633C722969FFC00CF45BD /* DVDPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVDPlayer.h; sourceTree = "<group>"; };
+		987633C822969FFC00CF45BD /* DVDPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DVDPlayer.m; sourceTree = "<group>"; };
+		987633CA2296A02100CF45BD /* VoiceBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceBox.h; sourceTree = "<group>"; };
+		987633CB2296A02100CF45BD /* VoiceBox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoiceBox.m; sourceTree = "<group>"; };
+		987633CD2296A04200CF45BD /* Projecter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Projecter.h; sourceTree = "<group>"; };
+		987633CE2296A04200CF45BD /* Projecter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Projecter.m; sourceTree = "<group>"; };
+		987633D02296A05F00CF45BD /* HomeDeviceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDeviceManager.h; sourceTree = "<group>"; };
+		987633D12296A05F00CF45BD /* HomeDeviceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDeviceManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		987633B122969F9600CF45BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		987633AB22969F9600CF45BD = {
+			isa = PBXGroup;
+			children = (
+				987633B622969F9600CF45BD /* 外观模式 */,
+				987633B522969F9600CF45BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		987633B522969F9600CF45BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				987633B422969F9600CF45BD /* 外观模式 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		987633B622969F9600CF45BD /* 外观模式 */ = {
+			isa = PBXGroup;
+			children = (
+				987633B722969F9600CF45BD /* main.m */,
+				987633BE22969FA100CF45BD /* HomeDevice.h */,
+				987633BF22969FA100CF45BD /* HomeDevice.m */,
+				987633C122969FCC00CF45BD /* AirConditioner.h */,
+				987633C222969FCC00CF45BD /* AirConditioner.m */,
+				987633C422969FE700CF45BD /* CDPlayer.h */,
+				987633C522969FE700CF45BD /* CDPlayer.m */,
+				987633C722969FFC00CF45BD /* DVDPlayer.h */,
+				987633C822969FFC00CF45BD /* DVDPlayer.m */,
+				987633CA2296A02100CF45BD /* VoiceBox.h */,
+				987633CB2296A02100CF45BD /* VoiceBox.m */,
+				987633CD2296A04200CF45BD /* Projecter.h */,
+				987633CE2296A04200CF45BD /* Projecter.m */,
+				987633D02296A05F00CF45BD /* HomeDeviceManager.h */,
+				987633D12296A05F00CF45BD /* HomeDeviceManager.m */,
+			);
+			path = "外观模式";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		987633B322969F9600CF45BD /* 外观模式 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 987633BB22969F9600CF45BD /* Build configuration list for PBXNativeTarget "外观模式" */;
+			buildPhases = (
+				987633B022969F9600CF45BD /* Sources */,
+				987633B122969F9600CF45BD /* Frameworks */,
+				987633B222969F9600CF45BD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "外观模式";
+			productName = "外观模式";
+			productReference = 987633B422969F9600CF45BD /* 外观模式 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		987633AC22969F9600CF45BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Brooks;
+				TargetAttributes = {
+					987633B322969F9600CF45BD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 987633AF22969F9600CF45BD /* Build configuration list for PBXProject "外观模式" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 987633AB22969F9600CF45BD;
+			productRefGroup = 987633B522969F9600CF45BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				987633B322969F9600CF45BD /* 外观模式 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		987633B022969F9600CF45BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				987633C022969FA100CF45BD /* HomeDevice.m in Sources */,
+				987633C622969FE700CF45BD /* CDPlayer.m in Sources */,
+				987633D22296A05F00CF45BD /* HomeDeviceManager.m in Sources */,
+				987633CF2296A04200CF45BD /* Projecter.m in Sources */,
+				987633C922969FFC00CF45BD /* DVDPlayer.m in Sources */,
+				987633C322969FCC00CF45BD /* AirConditioner.m in Sources */,
+				987633CC2296A02100CF45BD /* VoiceBox.m in Sources */,
+				987633B822969F9600CF45BD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		987633B922969F9600CF45BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		987633BA22969F9600CF45BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		987633BC22969F9600CF45BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		987633BD22969F9600CF45BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		987633AF22969F9600CF45BD /* Build configuration list for PBXProject "外观模式" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				987633B922969F9600CF45BD /* Debug */,
+				987633BA22969F9600CF45BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		987633BB22969F9600CF45BD /* Build configuration list for PBXNativeTarget "外观模式" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				987633BC22969F9600CF45BD /* Debug */,
+				987633BD22969F9600CF45BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 987633AC22969F9600CF45BD /* Project object */;
+}

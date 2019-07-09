@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98329A582289AB19001007D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A572289AB19001007D0 /* main.m */; };
+		98329A6A2289AB62001007D0 /* HWPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A5F2289AB62001007D0 /* HWPhone.m */; };
+		98329A6B2289AB62001007D0 /* MIPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A612289AB62001007D0 /* MIPhone.m */; };
+		98329A6C2289AB62001007D0 /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A632289AB62001007D0 /* Phone.m */; };
+		98329A6D2289AB62001007D0 /* IPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A652289AB62001007D0 /* IPhone.m */; };
+		98329A6E2289AB62001007D0 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A662289AB62001007D0 /* Store.m */; };
+		98329A6F2289AB62001007D0 /* PhoneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A672289AB62001007D0 /* PhoneFactory.m */; };
+		98329A722289ABC2001007D0 /* IPhoneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A712289ABC2001007D0 /* IPhoneFactory.m */; };
+		98329A782289ABD5001007D0 /* HWPhoneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A772289ABD5001007D0 /* HWPhoneFactory.m */; };
+		98329A7B2289AC1F001007D0 /* MIPhoneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A7A2289AC1F001007D0 /* MIPhoneFactory.m */; };
+		98329A7E2289AE7E001007D0 /* MZPhoneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A7D2289AE7E001007D0 /* MZPhoneFactory.m */; };
+		98329A812289AEA2001007D0 /* MZPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 98329A802289AEA2001007D0 /* MZPhone.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		98329A522289AB19001007D0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		98329A542289AB19001007D0 /* 工厂模式 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "工厂模式"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98329A572289AB19001007D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		98329A5E2289AB62001007D0 /* HWPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPhone.h; sourceTree = "<group>"; };
+		98329A5F2289AB62001007D0 /* HWPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWPhone.m; sourceTree = "<group>"; };
+		98329A602289AB62001007D0 /* MIPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIPhone.h; sourceTree = "<group>"; };
+		98329A612289AB62001007D0 /* MIPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIPhone.m; sourceTree = "<group>"; };
+		98329A622289AB62001007D0 /* Phone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phone.h; sourceTree = "<group>"; };
+		98329A632289AB62001007D0 /* Phone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phone.m; sourceTree = "<group>"; };
+		98329A642289AB62001007D0 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		98329A652289AB62001007D0 /* IPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPhone.m; sourceTree = "<group>"; };
+		98329A662289AB62001007D0 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		98329A672289AB62001007D0 /* PhoneFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneFactory.m; sourceTree = "<group>"; };
+		98329A682289AB62001007D0 /* PhoneFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneFactory.h; sourceTree = "<group>"; };
+		98329A692289AB62001007D0 /* IPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPhone.h; sourceTree = "<group>"; };
+		98329A702289ABC2001007D0 /* IPhoneFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPhoneFactory.h; sourceTree = "<group>"; };
+		98329A712289ABC2001007D0 /* IPhoneFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPhoneFactory.m; sourceTree = "<group>"; };
+		98329A762289ABD5001007D0 /* HWPhoneFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWPhoneFactory.h; sourceTree = "<group>"; };
+		98329A772289ABD5001007D0 /* HWPhoneFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWPhoneFactory.m; sourceTree = "<group>"; };
+		98329A792289AC1F001007D0 /* MIPhoneFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIPhoneFactory.h; sourceTree = "<group>"; };
+		98329A7A2289AC1F001007D0 /* MIPhoneFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIPhoneFactory.m; sourceTree = "<group>"; };
+		98329A7C2289AE7E001007D0 /* MZPhoneFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPhoneFactory.h; sourceTree = "<group>"; };
+		98329A7D2289AE7E001007D0 /* MZPhoneFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPhoneFactory.m; sourceTree = "<group>"; };
+		98329A7F2289AEA2001007D0 /* MZPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPhone.h; sourceTree = "<group>"; };
+		98329A802289AEA2001007D0 /* MZPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPhone.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98329A512289AB19001007D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		98329A4B2289AB19001007D0 = {
+			isa = PBXGroup;
+			children = (
+				98329A562289AB19001007D0 /* 工厂模式 */,
+				98329A552289AB19001007D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		98329A552289AB19001007D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98329A542289AB19001007D0 /* 工厂模式 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98329A562289AB19001007D0 /* 工厂模式 */ = {
+			isa = PBXGroup;
+			children = (
+				98329A572289AB19001007D0 /* main.m */,
+				98329A622289AB62001007D0 /* Phone.h */,
+				98329A632289AB62001007D0 /* Phone.m */,
+				98329A5E2289AB62001007D0 /* HWPhone.h */,
+				98329A5F2289AB62001007D0 /* HWPhone.m */,
+				98329A692289AB62001007D0 /* IPhone.h */,
+				98329A652289AB62001007D0 /* IPhone.m */,
+				98329A602289AB62001007D0 /* MIPhone.h */,
+				98329A612289AB62001007D0 /* MIPhone.m */,
+				98329A7F2289AEA2001007D0 /* MZPhone.h */,
+				98329A802289AEA2001007D0 /* MZPhone.m */,
+				98329A682289AB62001007D0 /* PhoneFactory.h */,
+				98329A672289AB62001007D0 /* PhoneFactory.m */,
+				98329A702289ABC2001007D0 /* IPhoneFactory.h */,
+				98329A712289ABC2001007D0 /* IPhoneFactory.m */,
+				98329A792289AC1F001007D0 /* MIPhoneFactory.h */,
+				98329A7A2289AC1F001007D0 /* MIPhoneFactory.m */,
+				98329A762289ABD5001007D0 /* HWPhoneFactory.h */,
+				98329A772289ABD5001007D0 /* HWPhoneFactory.m */,
+				98329A7C2289AE7E001007D0 /* MZPhoneFactory.h */,
+				98329A7D2289AE7E001007D0 /* MZPhoneFactory.m */,
+				98329A642289AB62001007D0 /* Store.h */,
+				98329A662289AB62001007D0 /* Store.m */,
+			);
+			path = "工厂模式";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98329A532289AB19001007D0 /* 工厂模式 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98329A5B2289AB19001007D0 /* Build configuration list for PBXNativeTarget "工厂模式" */;
+			buildPhases = (
+				98329A502289AB19001007D0 /* Sources */,
+				98329A512289AB19001007D0 /* Frameworks */,
+				98329A522289AB19001007D0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "工厂模式";
+			productName = "工厂模式";
+			productReference = 98329A542289AB19001007D0 /* 工厂模式 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98329A4C2289AB19001007D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Brooks;
+				TargetAttributes = {
+					98329A532289AB19001007D0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 98329A4F2289AB19001007D0 /* Build configuration list for PBXProject "工厂模式" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 98329A4B2289AB19001007D0;
+			productRefGroup = 98329A552289AB19001007D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98329A532289AB19001007D0 /* 工厂模式 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98329A502289AB19001007D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98329A6C2289AB62001007D0 /* Phone.m in Sources */,
+				98329A812289AEA2001007D0 /* MZPhone.m in Sources */,
+				98329A582289AB19001007D0 /* main.m in Sources */,
+				98329A7E2289AE7E001007D0 /* MZPhoneFactory.m in Sources */,
+				98329A6B2289AB62001007D0 /* MIPhone.m in Sources */,
+				98329A7B2289AC1F001007D0 /* MIPhoneFactory.m in Sources */,
+				98329A6E2289AB62001007D0 /* Store.m in Sources */,
+				98329A6A2289AB62001007D0 /* HWPhone.m in Sources */,
+				98329A782289ABD5001007D0 /* HWPhoneFactory.m in Sources */,
+				98329A722289ABC2001007D0 /* IPhoneFactory.m in Sources */,
+				98329A6F2289AB62001007D0 /* PhoneFactory.m in Sources */,
+				98329A6D2289AB62001007D0 /* IPhone.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		98329A592289AB19001007D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		98329A5A2289AB19001007D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		98329A5C2289AB19001007D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		98329A5D2289AB19001007D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98329A4F2289AB19001007D0 /* Build configuration list for PBXProject "工厂模式" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98329A592289AB19001007D0 /* Debug */,
+				98329A5A2289AB19001007D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98329A5B2289AB19001007D0 /* Build configuration list for PBXNativeTarget "工厂模式" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98329A5C2289AB19001007D0 /* Debug */,
+				98329A5D2289AB19001007D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98329A4C2289AB19001007D0 /* Project object */;
+}

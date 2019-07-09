@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		987634012297DB7800CF45BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 987634002297DB7800CF45BD /* main.m */; };
+		987634092297DB8300CF45BD /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 987634082297DB8300CF45BD /* Shape.m */; };
+		9876340C2297DC1200CF45BD /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 9876340B2297DC1200CF45BD /* Square.m */; };
+		9876340F2297DC1D00CF45BD /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9876340E2297DC1D00CF45BD /* Rectangle.m */; };
+		987634122297DC2500CF45BD /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 987634112297DC2500CF45BD /* Circle.m */; };
+		987634152297DC3900CF45BD /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 987634142297DC3900CF45BD /* Color.m */; };
+		987634182297DC5000CF45BD /* RedColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 987634172297DC5000CF45BD /* RedColor.m */; };
+		9876341B2297DC5E00CF45BD /* GreenColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9876341A2297DC5E00CF45BD /* GreenColor.m */; };
+		9876341E2297DC6700CF45BD /* BlueColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9876341D2297DC6700CF45BD /* BlueColor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		987633FB2297DB7800CF45BD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		987633FD2297DB7800CF45BD /* 桥接模式 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "桥接模式"; sourceTree = BUILT_PRODUCTS_DIR; };
+		987634002297DB7800CF45BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		987634072297DB8300CF45BD /* Shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		987634082297DB8300CF45BD /* Shape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shape.m; sourceTree = "<group>"; };
+		9876340A2297DC1200CF45BD /* Square.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		9876340B2297DC1200CF45BD /* Square.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
+		9876340D2297DC1D00CF45BD /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
+		9876340E2297DC1D00CF45BD /* Rectangle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
+		987634102297DC2500CF45BD /* Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		987634112297DC2500CF45BD /* Circle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
+		987634132297DC3900CF45BD /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		987634142297DC3900CF45BD /* Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		987634162297DC5000CF45BD /* RedColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedColor.h; sourceTree = "<group>"; };
+		987634172297DC5000CF45BD /* RedColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedColor.m; sourceTree = "<group>"; };
+		987634192297DC5E00CF45BD /* GreenColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GreenColor.h; sourceTree = "<group>"; };
+		9876341A2297DC5E00CF45BD /* GreenColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreenColor.m; sourceTree = "<group>"; };
+		9876341C2297DC6700CF45BD /* BlueColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueColor.h; sourceTree = "<group>"; };
+		9876341D2297DC6700CF45BD /* BlueColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueColor.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		987633FA2297DB7800CF45BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		987633F42297DB7800CF45BD = {
+			isa = PBXGroup;
+			children = (
+				987633FF2297DB7800CF45BD /* 桥接模式 */,
+				987633FE2297DB7800CF45BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		987633FE2297DB7800CF45BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				987633FD2297DB7800CF45BD /* 桥接模式 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		987633FF2297DB7800CF45BD /* 桥接模式 */ = {
+			isa = PBXGroup;
+			children = (
+				987634002297DB7800CF45BD /* main.m */,
+				987634072297DB8300CF45BD /* Shape.h */,
+				987634082297DB8300CF45BD /* Shape.m */,
+				9876340A2297DC1200CF45BD /* Square.h */,
+				9876340B2297DC1200CF45BD /* Square.m */,
+				9876340D2297DC1D00CF45BD /* Rectangle.h */,
+				9876340E2297DC1D00CF45BD /* Rectangle.m */,
+				987634102297DC2500CF45BD /* Circle.h */,
+				987634112297DC2500CF45BD /* Circle.m */,
+				987634132297DC3900CF45BD /* Color.h */,
+				987634142297DC3900CF45BD /* Color.m */,
+				987634162297DC5000CF45BD /* RedColor.h */,
+				987634172297DC5000CF45BD /* RedColor.m */,
+				987634192297DC5E00CF45BD /* GreenColor.h */,
+				9876341A2297DC5E00CF45BD /* GreenColor.m */,
+				9876341C2297DC6700CF45BD /* BlueColor.h */,
+				9876341D2297DC6700CF45BD /* BlueColor.m */,
+			);
+			path = "桥接模式";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		987633FC2297DB7800CF45BD /* 桥接模式 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 987634042297DB7800CF45BD /* Build configuration list for PBXNativeTarget "桥接模式" */;
+			buildPhases = (
+				987633F92297DB7800CF45BD /* Sources */,
+				987633FA2297DB7800CF45BD /* Frameworks */,
+				987633FB2297DB7800CF45BD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "桥接模式";
+			productName = "桥接模式";
+			productReference = 987633FD2297DB7800CF45BD /* 桥接模式 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		987633F52297DB7800CF45BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Brooks;
+				TargetAttributes = {
+					987633FC2297DB7800CF45BD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 987633F82297DB7800CF45BD /* Build configuration list for PBXProject "桥接模式" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 987633F42297DB7800CF45BD;
+			productRefGroup = 987633FE2297DB7800CF45BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				987633FC2297DB7800CF45BD /* 桥接模式 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		987633F92297DB7800CF45BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9876340C2297DC1200CF45BD /* Square.m in Sources */,
+				987634012297DB7800CF45BD /* main.m in Sources */,
+				987634182297DC5000CF45BD /* RedColor.m in Sources */,
+				9876341E2297DC6700CF45BD /* BlueColor.m in Sources */,
+				987634122297DC2500CF45BD /* Circle.m in Sources */,
+				987634152297DC3900CF45BD /* Color.m in Sources */,
+				987634092297DB8300CF45BD /* Shape.m in Sources */,
+				9876340F2297DC1D00CF45BD /* Rectangle.m in Sources */,
+				9876341B2297DC5E00CF45BD /* GreenColor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		987634022297DB7800CF45BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		987634032297DB7800CF45BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		987634052297DB7800CF45BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		987634062297DB7800CF45BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		987633F82297DB7800CF45BD /* Build configuration list for PBXProject "桥接模式" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				987634022297DB7800CF45BD /* Debug */,
+				987634032297DB7800CF45BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		987634042297DB7800CF45BD /* Build configuration list for PBXNativeTarget "桥接模式" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				987634052297DB7800CF45BD /* Debug */,
+				987634062297DB7800CF45BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 987633F52297DB7800CF45BD /* Project object */;
+}
