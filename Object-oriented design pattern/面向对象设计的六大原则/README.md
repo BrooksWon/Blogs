@@ -15,7 +15,7 @@
 
 #### 思维导图
 
-![思维导图]([https://github.com/BrooksWon/Blogs/blob/master/Object-oriented%20design%20pattern/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/OOD%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99.png])
+![思维导图](https://github.com/BrooksWon/Blogs/blob/master/Object-oriented%20design%20pattern/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/OOD%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99.png)
 
 [思维导图源文件]([https://github.com/BrooksWon/Blogs/blob/master/Object-oriented%20design%20pattern/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99.xmind](https://github.com/BrooksWon/Blogs/blob/master/Object-oriented design pattern/面向对象设计的六大原则.xmind))
 
