@@ -20,8 +20,8 @@
 
 ## 设计模式
 
-1. [在iOS Category重写原类方法中调用原类方法](https://github.com/BrooksWon/Blogs/blob/master/dev/%E5%9C%A8iOS%20Category%E9%87%8D%E5%86%99%E5%8E%9F%E7%B1%BB%E6%96%B9%E6%B3%95%E4%B8%AD%E8%B0%83%E7%94%A8%E5%8E%9F%E7%B1%BB%E6%96%B9%E6%B3%95t.md)
-2. [APP组件化设计](
+1. [面向对象设计的六大原则](https://github.com/BrooksWon/Blogs/blob/master/Object-oriented%20design%20pattern/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/README.md)
+2. [面向对象设计模式](https://github.com/BrooksWon/Blogs/blob/master/Object-oriented%20design%20pattern/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/README.md)
 
 ## 团队管理思考
 
