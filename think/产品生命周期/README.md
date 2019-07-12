@@ -67,7 +67,7 @@
 
 ## 不同阶段的特征曲线
 
-![研发部 > [BETA]组内开放式分享-产品生命周期 > image2019-3-19 10:21:13.png](http://dev.xundameng.com:8095/download/attachments/34185016/image2019-3-19%2010%3A21%3A13.png?version=1&modificationDate=1552963042000&api=v2)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E4%B8%8D%E5%90%8C%E9%98%B6%E6%AE%B5%E7%9A%84%E7%89%B9%E5%BE%81%E6%9B%B2%E7%BA%BF.png)
 
 
 
@@ -77,13 +77,13 @@
 
 ## 如何判断产品所处的阶段 ?
 
-![研发部 > [BETA]组内开放式分享-产品生命周期 > image2019-3-19 10:21:48.png](http://dev.xundameng.com:8095/download/attachments/34185016/image2019-3-19%2010%3A21%3A48.png?version=1&modificationDate=1552963042000&api=v2)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E4%BA%A7%E5%93%81%E6%89%80%E5%A4%84%E7%9A%84%E9%98%B6%E6%AE%B5.png)
 
 
 
 ## 不同产品阶段对应的策略有哪些不同？
 
-![研发部 > [BETA]组内开放式分享-产品生命周期 > image2019-3-19 10:23:25.png](http://dev.xundameng.com:8095/download/attachments/34185016/image2019-3-19%2010%3A23%3A25.png?version=1&modificationDate=1552963042000&api=v2)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E4%B8%8D%E5%90%8C%E4%BA%A7%E5%93%81%E9%98%B6%E6%AE%B5%E5%AF%B9%E5%BA%94%E7%9A%84%E7%AD%96%E7%95%A5.png)
 
 
 
@@ -95,7 +95,7 @@
 
 ## 快手数据
 
-![研发部 > [BETA]组内开放式分享-产品生命周期 > image2019-3-19 10:25:44.png](http://dev.xundameng.com:8095/download/attachments/34185016/image2019-3-19%2010%3A25%3A44.png?version=1&modificationDate=1552963042000&api=v2)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E5%BF%AB%E6%89%8B%E6%95%B0%E6%8D%AE.png)
 
 
 
@@ -103,11 +103,11 @@
 
 ## 抖音数据
 
-![研发部 > [BETA]组内开放式分享-产品生命周期 > image2019-3-19 10:26:17.png](http://dev.xundameng.com:8095/download/attachments/34185016/image2019-3-19%2010%3A26%3A17.png?version=1&modificationDate=1552963042000&api=v2)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E6%8A%96%E9%9F%B3%E6%95%B0%E6%8D%AE.png)
 
 ## 某二手车数据
 
-![研发部 > [BETA]组内开放式分享-产品生命周期 > image2019-3-19 10:26:41.png](http://dev.xundameng.com:8095/download/attachments/34185016/image2019-3-19%2010%3A26%3A41.png?version=1&modificationDate=1552963042000&api=v2)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E6%9F%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E6%95%B0%E6%8D%AE.png)
 
 
 
