@@ -27,3 +27,8 @@
 
 1. [Mentor机制](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83%E4%B9%8BMentor%E6%9C%BA%E5%88%B6.md)
 2. [需求IO机制](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83%E4%B9%8B%E9%9C%80%E6%B1%82IO%E6%9C%BA%E5%88%B6.md)
+
+## 一些思考
+
+1. [[BETA] 产品生命周期]()
+2. [[BETA]理解中台]()
