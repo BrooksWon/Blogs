@@ -31,4 +31,4 @@
 ## 一些思考
 
 1. [[BETA]产品生命周期](https://github.com/BrooksWon/Blogs/tree/master/think/product)
-2. [[BETA]理解中台]()
+2. [[BETA]理解中台](https://github.com/BrooksWon/Blogs/blob/master/think/zhongtai/README.md)
