@@ -67,7 +67,7 @@
 
 ## 不同阶段的特征曲线
 
-![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E4%B8%8D%E5%90%8C%E9%98%B6%E6%AE%B5%E7%9A%84%E7%89%B9%E5%BE%81%E6%9B%B2%E7%BA%BF.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E4%B8%8D%E5%90%8C%E9%98%B6%E6%AE%B5%E7%9A%84%E7%89%B9%E5%BE%81%E6%9B%B2%E7%BA%BF.png)
 
 
 
@@ -77,13 +77,13 @@
 
 ## 如何判断产品所处的阶段 ?
 
-![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E4%BA%A7%E5%93%81%E6%89%80%E5%A4%84%E7%9A%84%E9%98%B6%E6%AE%B5.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E4%BA%A7%E5%93%81%E6%89%80%E5%A4%84%E7%9A%84%E9%98%B6%E6%AE%B5.png)
 
 
 
 ## 不同产品阶段对应的策略有哪些不同？
 
-![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E4%B8%8D%E5%90%8C%E4%BA%A7%E5%93%81%E9%98%B6%E6%AE%B5%E5%AF%B9%E5%BA%94%E7%9A%84%E7%AD%96%E7%95%A5.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E4%B8%8D%E5%90%8C%E4%BA%A7%E5%93%81%E9%98%B6%E6%AE%B5%E5%AF%B9%E5%BA%94%E7%9A%84%E7%AD%96%E7%95%A5.png)
 
 
 
@@ -95,7 +95,7 @@
 
 ## 快手数据
 
-![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E5%BF%AB%E6%89%8B%E6%95%B0%E6%8D%AE.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E5%BF%AB%E6%89%8B%E6%95%B0%E6%8D%AE.png)
 
 
 
@@ -103,11 +103,11 @@
 
 ## 抖音数据
 
-![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E6%8A%96%E9%9F%B3%E6%95%B0%E6%8D%AE.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E6%8A%96%E9%9F%B3%E6%95%B0%E6%8D%AE.png)
 
 ## 某二手车数据
 
-![](https://github.com/BrooksWon/Blogs/blob/master/think/%E4%BA%A7%E5%93%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E6%9F%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E6%95%B0%E6%8D%AE.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E6%9F%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E6%95%B0%E6%8D%AE.png)
 
 
 
