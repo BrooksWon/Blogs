@@ -10,6 +10,10 @@
 1. [《Effective Objective-C》](https://github.com/BrooksWon/Blogs/tree/master/books/%E3%80%8AEffective%20Objective-C%E3%80%8B)
 2. [《Objective-C 高级编程》](https://github.com/BrooksWon/Blogs/tree/master/books/%E3%80%8AObjective-C%20%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E3%80%8B)
 
+## 算法
+
+1. [10大经典排序算法和7大查找算法](https://github.com/BrooksWon/Blogs/blob/master/algorithm/README.md)
+
 ## 工程开发
 
 1. [在iOS Category重写原类方法中调用原类方法](https://github.com/BrooksWon/Blogs/blob/master/dev/%E5%9C%A8iOS%20Category%E9%87%8D%E5%86%99%E5%8E%9F%E7%B1%BB%E6%96%B9%E6%B3%95%E4%B8%AD%E8%B0%83%E7%94%A8%E5%8E%9F%E7%B1%BB%E6%96%B9%E6%B3%95t.md)
