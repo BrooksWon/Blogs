@@ -90,11 +90,11 @@
 
 ### 编译过程
 
-![](/Users/Brooks/blog/blogs/swift/编译过程.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B.png)
 
 ### Swift语言程序编译过程
 
-![](/Users/Brooks/blog/blogs/swift/Swift语言编译过程.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Swift%E8%AF%AD%E8%A8%80%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B.png)
 
 
 
