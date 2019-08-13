@@ -27,17 +27,17 @@ return [0, 1].
 
 import java.util.HashMap;
 
-public class Two_Num {
-    public static int[] twoNum(int[] array, int target){
+public class TwoSum {
+    public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap();
 
-        for (int i = 0; i < array.length; i++) {
-            if (map.containsKey(target - array[i])) {
-                int anotherIndex = map.get(target - array[i]);
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(target - nums[i])) {
+                int anotherIndex = map.get(target - nums[i]);
 
                 return new int[]{anotherIndex, i};
             } else {
-                map.put(array[i],i);
+                map.put(nums[i],i);
             }
         }
 
