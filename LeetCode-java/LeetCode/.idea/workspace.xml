@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f5521be-dab2-488c-913c-bebf11dab5cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/Brooks/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCode/com/Brooks/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCode/com/Brooks/Two_Num.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Brooks/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Brooks/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Brooks/Two_Num.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Brooks/TwoSum.java" afterDir="false" />
-    </list>
+    <list default="true" id="7f5521be-dab2-488c-913c-bebf11dab5cd" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +157,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565666229999" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565689492063" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -207,12 +200,12 @@
       <updated>1565605509563</updated>
       <workItem from="1565605511927" duration="89000" />
       <workItem from="1565605606139" duration="1000" />
-      <workItem from="1565605648301" duration="4925000" />
+      <workItem from="1565605648301" duration="5216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5015000" />
+    <option name="totallyTimeSpent" value="5306000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
