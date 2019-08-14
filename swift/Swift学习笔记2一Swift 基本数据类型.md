@@ -245,25 +245,153 @@ print(writeToFile(content: ""))
 
 ### Optional
 
+- 通过在变量类型后面加 `?` 表示: `这里有一个值，他等于 x` 或者 `这里根本没有值` 
 
+- 你可以通过给可选变量赋值一个 nil 来将之设置为没有值
+
+  - 在 Objective-C 中 nil 是一个指向不存在对象的指针 
+  - 在 Swift 中， nil 不是指针，他是值缺失的一种特殊类型，任何类型的可选项都可以设 置成 nil 而不仅仅是对象类型 
+
+  ```swift
+  var str: String = nil //❌'nil' cannot initialize specified type 'String'
+  var str2: String? = nil
+  ```
+
+  
 
 #### 为什么需要 Optional
 
+- Objective-C 里的 nil 是无类型的指针
+- Objective-C 里面的数组、字典、集合等不允许放入 nil
+- Objective-C 所有对象变量都可以为 nil
+- Objective-C 只能用在对象上，而在其他地方又用其他特殊值(例如NSNotFound)表示值的缺失 
+
+
+
 #### Optional-If 语句以及强制展开
+
+- 可选项是没法直接使用的， 需要用!展开之后才能使用(意思是我知道这个可选项里边有值，展开吧) 
+
+  ```swift
+  var str: String? = "abc"
+  let count = str.count//❌value of optional type 'String?' must be unwrapped to refer to member 'count' of wrapped base type 'String'
+  ```
+
+  正确姿势是
+
+  ```swift
+  var str: String? = "abc"
+  if str != nil {
+      let count = str!.count
+  }
+  ```
+
+  
 
 #### Optional-强制展开
 
+- 使用 ! 来获取一个不存在的可选值会导致运行错误，在使用!强制展开之前必须确保可选项中包含一个非 nil 的值
+
+  ```swift
+  var str: String?
+  let count = str!.count//❌Unexpectedly found nil while unwrapping an Optional value
+  ```
+
+  正确姿势
+
+  ```swift
+  var str: String? = "abc"
+  let count = str!.count
+  ```
+
+  
+
 #### Optional-绑定
+
+- 可以使用可选项绑定来判断可选项是否包含值，如果包含就把值赋给一个临时的常量或者变量
+
+- 可选绑定可以与 if 和 while 的语句使用来检查可选项内部的值，并赋值给一个变量或常量
+
+- 同一个 if 语句中包含多可选项绑定，用逗号分隔即可。如果任一可选绑定结果是 nil 或者布尔值为 false ，那么整个 if 判断会被看作 false
+
+  ```swift
+  var str: String? = "abc"
+  if let actualStr = str {
+      let count = actualStr.count
+      print(count)
+  }
+  ```
+
+  
 
 #### Optional-隐式展开
 
+- 有些可选项一旦被设定值之后，就会一直拥有值，在这种情况下，就可以去掉检查的需求，也不必每次访问的时候都进行展开，通过在声明的类型后边添加一个叹号( String! )而非问号( String? ) 来书写隐式展开可 选项 
+
+- 隐式展开可选项主要被用在 Swift 类的初始化过程中
+
+  ```swift
+  var str: String! = "abc"
+  let count = str.count
+  ```
+
+  
+
 #### Optional-可选链
+
+- 可选项后面加问号，如果可选项不为 nil，返回一个可选项结果，否则返回 nil 
+
+  ```swift
+  var str: String? = "abc"
+  let count = str?.count
+  let lastIndex = count-1//error: value of optional type 'Int?' must be unwrapped to a value of type 'Int
+  ```
+
+  正确姿势
+
+  ```swift
+  var str: String? = "abc"
+  let count = str?.count
+  if count != nil {
+      let lastIndex = count!-1
+      print(lastIndex)
+  }
+  ```
+
+  
 
 #### Optional-实现探究
 
+- Optional 其实是标准库里的一个 enum 类型，用标准库实现语言特性的典型
+
+  ![](/Users/Brooks/blog/blogs/swift/Optional.png)
+
+- Optional.none 就是 nil，Optional.some 则包装了实际的值
+
+  ```swift
+  var str: Optional<String> = "abc"
+  if let actualStr = str {
+      let count = actualStr.count
+      print(count)
+  }
+  ```
+
+  
+
 ##### Optional-展开实现
 
+- 泛型属性 `unsafelyUnwrapped`
 
+  ![](/Users/Brooks/blog/blogs/swift/unsafelyUnwrapped.png)
+
+- 理论上我们可以直接调用 unsafelyUnwrapped 获取可选项的值
+
+  ```swift
+  var str: String? = "abc"
+  let count = str.unsafelyUnwrapped.count
+  ```
+
+  
 
 ## 字符串
 
