@@ -364,7 +364,7 @@ print(writeToFile(content: ""))
 
 - Optional 其实是标准库里的一个 enum 类型，用标准库实现语言特性的典型
 
-  ![](/Users/Brooks/blog/blogs/swift/Optional.png)
+  ![](https://github.com/BrooksWon/Blogs/blob/master/swift/Optional.png)
 
 - Optional.none 就是 nil，Optional.some 则包装了实际的值
 
@@ -382,7 +382,7 @@ print(writeToFile(content: ""))
 
 - 泛型属性 `unsafelyUnwrapped`
 
-  ![](/Users/Brooks/blog/blogs/swift/unsafelyUnwrapped.png)
+  ![](https://github.com/BrooksWon/Blogs/blob/master/swift/unsafelyUnwrapped.png)
 
 - 理论上我们可以直接调用 unsafelyUnwrapped 获取可选项的值
 
