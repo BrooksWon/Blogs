@@ -694,6 +694,15 @@ str.removeLast()//Swif
 str.removeFirst()//wif
 ```
 
+#### 替换
+
+- 使用 replaceSubrange 函数替换字符串内某个 Range 的字符串
+
+```swift
+var str = "hello, World"
+str.replaceSubrange(str.index(str.endIndex, offsetBy: -5) ..< str.endIndex, with: "Swift")//hello, Swift
+```
+
 
 
 ### 字符串-子串和字符串比较
