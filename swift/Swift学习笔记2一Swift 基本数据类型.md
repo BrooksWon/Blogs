@@ -399,36 +399,338 @@ print(writeToFile(content: ""))
 
 #### 初始化空串
 
+- 字面量
+
+  ```swift
+  var emptyString = ""
+  ```
+
+- 初始化器语法
+
+  ```swift
+  var anotherEmptyString = String()
+  ```
+
+- iEmpty 检查是否为空串
+
+  ```swift
+  var str: String = String()
+  if str.isEmpty {
+      print("nothing")//输出nothing
+  }
+  ```
+
+  
+
 #### 字面量
+
+- 字符串字面量是被双引号(”)包裹的固定顺序文本字符
+
+- Swift 会为 str 常量推断类型为 String
+
+  ```swift
+  let string = "some string"
+  ```
+
+  
 
 #### 多行字面量
 
+- 多行字符串字面量是用三个双引号引起来的一系列字符
+
+- 多行字符串字面量把所有行包括在引号内，开始和结束默认不会有换行符
+
+- 当你的代码中在多行字符串字面量里包含了换行，那个换行符同样会成为字符串里的值。如果你想要使用换行符来让你的代码易读，却不想让换行符成为字符串的值，那就在那些行的末尾使用反斜杠( \ )
+
+  ```swift
+  let softWrappedQuotation = """
+  This framework allows you to pick something with a picker presented as an action sheet. In addition, it allows you to add actions arround the presented picker which behave like a button and can be tapped by the user. The result looks very much like an UIActionSheet or UIAlertController with a UIPickerView and some UIActions attached.
+  
+  Besides being a fully-usable project, RMPickerViewController also is an example for an use case of RMActionController. You can use it to learn how to present a picker other than UIPickerView.
+  """
+  print(softWrappedQuotation)
+  
+  /*
+  This framework allows you to pick something with a picker presented as an action sheet. In addition, it allows you to add actions arround the presented picker which behave like a button and can be tapped by the user. The result looks very much like an UIActionSheet or UIAlertController with a UIPickerView and some UIActions attached.
+  
+  Besides being a fully-usable project, RMPickerViewController also is an example for an use case of RMActionController. You can use it to learn how to present a picker other than UIPickerView.
+  */
+  ```
+
+  ```swift
+  let softWrappedQuotation1 = """
+  This framework allows you to pick something with a picker presented as an action sheet. In addition, it allows you to add actions arround the presented picker which behave like a button and can be tapped by the user. The result looks very much like an UIActionSheet or UIAlertController with a UIPickerView and some UIActions attached.\
+  
+  Besides being a fully-usable project, RMPickerViewController also is an example for an use case of RMActionController. You can use it to learn how to present a picker other than UIPickerView.
+  """
+  print(softWrappedQuotation1)
+  
+  /*
+  This framework allows you to pick something with a picker presented as an action sheet. In addition, it allows you to add actions arround the presented picker which behave like a button and can be tapped by the user. The result looks very much like an UIActionSheet or UIAlertController with a UIPickerView and some UIActions attached.
+  Besides being a fully-usable project, RMPickerViewController also is an example for an use case of RMActionController. You can use it to learn how to present a picker other than UIPickerView.
+  */
+  ```
+
+- 要让多行字符串字面量起始或结束于换行，就在第一或最后一行写一个空行
+
+- 多行字符串可以缩进以匹配周围的代码。双引号( """ )前的空格会告诉 Swift 其他行前应该有多少空白是需要忽略的
+
+- 如果你在某行的空格超过了结束的双引号( """ )，那么这些空格会被包含
+
+  ![](/Users/Brooks/blog/blogs/swift/多行字面量.png)
+
+  
+
 #### 字符串里的特殊字符
 
+- 转义特殊字符 \0 (空字符)， \\ (反斜杠)， \t (水平制表符)， \n (换行符)， \r(回车符)， \" (双引号) 以及 \' (单引号) 
+- 任意的 Unicode 标量，写作 \u{n}，里边的 n 是一个 1-8 位的16 进制数字，其值是合法 Unicode 值
+- 可以在多行字符串字面量中包含双引号( " )而不需转义。要在多行字符串中包含文本 """ ，转义至
+  少一个双引号
+
+```swift
+let wisWords = "\"Imagination is more important than knowledge\" -Einstein"
+let dollarSign = "\u{24}"
+let blackHeart = "\u{2665}"
+let sparklingHeart = "\u{1F496}"
+```
+
+
+
 #### 扩展字符串分隔符(Raw String)
+
+- 在字符串字面量中放置扩展分隔符来在字符串中包含特殊字符而不让它们真的生效
+- 把字符串放在双引号( " )内并由井号( # )包裹
+- 如果字符串里有 "# 则首尾需要两个 ##
+- 如果你需要字符串中某个特殊符号的效果，使用匹配你包裹的井号数量的井号并在前面写转义符号 \
+
+```swift
+let str = #"Line 1\nLine 2 "#
+let str1 = #"Line 1\#nLine 2 "#
+let str2 = ###"Line 1\###nLine 2 "###
+print(str)
+print(str1)
+print(str2)
+
+/*
+Line 1\nLine 2 
+Line 1
+Line 2 
+Line 1
+Line 2 
+*/
+```
+
+
 
 ### 字符串-操作
 
 #### 字符串的可变性
 
+- var 指定的可以修改
+- let 指定的不可修改
+- 对比 Objective-C(NSString 和 NSMutableString)
+
+```swift
+var variableString = "hello"
+variableString += " world"
+//variableString is now "hello world"
+let contstantString = "你好"
+contstantString += "世界"
+//error: left side of mutating operator isn't mutable: 'contstantString' is a 'let' constant
+```
+
+
+
 #### 字符串是值类型
+
+- String 值在传递给方法或者函数的时候会被复制过去，赋值给常量或者变量的时候也是一样
+- Swift 编译器优化了字符串使用的资源，实际上拷贝只会在确实需要的时候才进行
+
+```swift
+var str = "abc"
+var str1 = str
+print(str == str1)//true
+str += "def"
+print(str)//abcdef
+print(str1)//abc
+print(str == str1)//falese
+```
+
+
 
 #### 操作字符
 
+- for-in 循环遍历 String 中的每一个独立的 Character
+- Character 类型
+- String 值可以通过传入 Character 数组来构造
+
+```swift
+for character in "Dog!🐶" {
+    print(character)
+}
+/*
+D
+o
+g
+!
+🐶
+*/
+let catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
+print(catCharacters)//["C", "a", "t", "!", "🐱"]
+```
+
+
+
 #### 字符串拼接
 
+- 使用加运算符( +)创建新字符串
+
+- 使用加赋值符号( +=)在已经存在的 String 值末尾追加一个 String 值
+
+- 使用 String 类型的 append() 方法来可以给一个 String 变量的末尾追加 Character 值
+
+  
+
 #### 字符串插值
+
+- 字符串插值是一种从混合常量、变量、字面量和表达式的字符串字面量构造新 String 值的方法
+- 每一个你插入到字符串字面量的元素都要被一对圆括号包裹，然后使用反斜杠前缀
+- 类似于 NSString 的 stringWithFormat 方法，但是更加简便，更强大
+
+```swift
+let multiplier = 3
+print("\(multiplier) times 2.5 is \(Double(3) * 2.5)")
+```
+
+- 可以在扩展字符串分隔符中创建一个包含在其他情况下会被当作字符串插值的字符
+
+  ```swift
+  print(#"Wirte an anterpolated string in Swift use \(multiplier)."#)//Wirte an anterpolated string in Swift use \(multiplier).
+  ```
+
+  
+
+- 要在使用扩展分隔符的字符串中使用字符串插值，在反斜杠后使用匹配首尾井号数量的井号
+
+  ```swift
+  print(#"6 times 7 is \#(6 * 7)."#)//6 times 7 is 42.
+  ```
+
+  
 
 ### 字符串-访问和修改
 
 #### 字符串索引
 
+- 每一个 String 值都有相关的索引类型， String.Index，它相当于每个 Character 在字符串中的位置
+- startIndex 属性来访问 String 中第一个 Character 的位置。 endIndex 属性就是 String中最后一个字符后的位置
+- endIndex 属性并不是字符串下标脚本的合法实际参数
+- 如果 String 为空，则 startIndex 与 endIndex 相等
+
+```swift
+let str = "hello Swift!"
+print(str[str.startIndex])//h
+
+let str1 = ""
+if str1.startIndex == str1.endIndex {
+    print("空串")//空串
+}
+
+if str1.isEmpty {
+    print("空串")//空串
+}
+```
+
+- 使用 index(before:) 和 index(after:) 方法来访问给定索引的前后
+
+  ```swift
+  let str = "hello Swift!"
+  
+  str[str.index(before: str.endIndex)]//!
+  str[str.index(after: str.startIndex)]//e
+  ```
+
+  
+
+- 要访问给定索引更远的索引，你可以使用 index(_:offsetBy:)
+
+  ```
+  str[str.index(before: str.endIndex)]//!
+  str[str.index(after: str.startIndex)]//e
+  str[str.index(str.startIndex, offsetBy: 6)]//S
+  ```
+
+  
+
+- 使用 indices 属性来访问字符串中每个字符的索引
+
 #### 插入
 
+- 插入字符，使用 insert(_:at:) 方法
+- 插入另一个字符串的内容到特定的索引，使用 insert(contentsOf:at:) 方法
+
+```swift
+var str = "hello"
+str.insert("!", at: str.endIndex)//hello!
+str.insert(contentsOf: " Swift", at: str.index(before: str.endIndex))//hello Swift!
+```
+
+
+
 #### 删除
+
+- 移除字符，使用 remove(at:)方法
+- 移除一小段特定范围的字符串，使用 removeSubrange(_:) 方法
+
+```swift
+var str = "hello Swift!"
+str.remove(at: str.index(before: str.endIndex))//hello Swift
+
+let range = str.startIndex ..< str.index(str.startIndex, offsetBy: 6)
+str.removeSubrange(range)//Swift
+
+str.removeLast()//Swif
+str.removeFirst()//wif
+```
+
+
 
 ### 字符串-子串和字符串比较
 
 #### 子字符串
 
+- 使用下标或者类似 prefix(_:) 的方法得到的子字符串是 Substring 类型
+- Substring 拥有 String 的大部分方法
+- Substring 可以转成 String 类型
+
+```swift
+var str = "hello, World!"
+let index = str.firstIndex(of: ",") ?? str.endIndex
+let beginning = str[..<index]
+let netStr = String(beginning)//hello
+```
+
+- 子字符串重用一部分原字符串的内存，修改字符串或者子字符串之前都不需要花费拷贝内存的代价
+
+- String 和 Substring 都遵循 StringProtocol 协议，也就是说它基本上能很方便地兼容所有
+  接受 StringProtocol 值的字符串操作函数
+
+  ![](/Users/Brooks/blog/blogs/swift/子字符串.png)
+
+  
+
 #### 字符串比较
+
+- 字符串和字符相等性(==和!=)
+- 前缀相等性 hasPrefix(_:)
+- 后缀相等性 hasSuffix(_:)
+
+```swift
+var str = "hello, World"
+var str1 = "hello"
+print(str == str1)//false
+print(str.hasPrefix("hello"))//true
+print(str.hasSuffix("World"))//true
+```
+
