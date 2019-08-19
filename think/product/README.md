@@ -121,3 +121,8 @@
 
 
 另,  2C和2B的产品生命周期、阶段特征、相应策略, 有什么不同之处吗 ?
+
+# 2019.08.15更新
+
+白鸦最近内部分享的「**有赞产品设计原则**」, 值得认真品读。强烈推荐: [语音地址](https://design.youzan.com/product-principle/share.html)，[原文地址](https://design.youzan.com/product-principle/share.html)
+
