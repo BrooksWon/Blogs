@@ -421,3 +421,252 @@ range.contains(-2)//true
     
     print(findTwoLostNum(nums: [1,1,2,3]))//(2, 3)
     ```
+
+## 运算符的优先级和结合性
+
+- 运算符的优先级使得一些运算符优先于其他运算符，高优先级的运算符会先被计算。
+- 结合性定义了具有相同优先级的运算符是如何结合(或关联)的——是与左边结合为一组，还是与右边结合为一组。可以这样理解:“它们是与左边的表达式结合的”或者“它们是与右边的表达式结合的”。
+
+## 运算符方法
+
+### 运算符重载
+
+- 类和结构体可以为现有的运算符提供自定义的实现，称为运算符重载。
+
+#### 一元运算符重载
+
+- 类与结构体也能提供标准一元运算符的实现。
+
+- 要实现前缀或者后缀运算符，需要在声明运算符函数的时候在 func 关键字之前指定 prefix 或者 postfix 限定符。
+
+  ```swift
+  struct Vector2D {
+      var x = 0.0, y = 0.0
+  }
+  
+  extension Vector2D {
+      static prefix func - (vector: Vector2D) -> Vector2D {
+          return Vector2D(x: -vector.x, y: -vector.y)
+      }
+  }
+  
+  let vector1 = Vector2D(x: 1.0, y: 1.0)
+  let vector2 = -vector1
+  print(vector2)//Vector2D(x: -1.0, y: -1.0)
+  ```
+
+  
+
+#### 组合赋值运算符重载
+
+- 组合赋值运算符将赋值运算符( = )与其它运算符进行结合。
+
+- 在实现的时候，需要把运算符的左参数设置成 inout 类型，因为这个参数的值会在运算 符函数内直接被修改。
+
+  ```swift
+  struct Vector2D {
+      var x = 0.0, y = 0.0
+  }
+  
+  extension Vector2D {
+      static func += (left: inout Vector2D, right: Vector2D) -> Vector2D {
+          left = Vector2D(x: left.x + right.x, y: left.y + right.y)
+          return left
+      }
+  }
+  
+  let vector1 = Vector2D(x: 1.0, y: 1.0)
+  var vector2 = Vector2D(x: 2.0, y: 2.0)
+  vector2 += vector1
+  
+  print(vector2)//Vector2D(x: 3.0, y: 3.0)
+  ```
+
+#### 等价运算符重载
+
+- 自定义类和结构体不接收等价运算符的默认实现，也就是所谓的“等于”运算符( == ) 和“不等于”运算符( != )。
+
+- 等价运算符重载要使用等价运算符来检查你自己类型的等价，需要和其他中缀运算符一样提供一个“等 于”运算符，并且遵循标准库的 Equatable 协议
+
+  ```swift
+  struct Vector2D {
+      var x = 0.0, y = 0.0
+  }
+  
+  extension Vector2D: Equatable {
+      static func == (left: Vector2D, right: Vector2D) -> Bool {
+          return left.x == right.x && left.y == right.y
+      }
+  }
+  
+  let vector1 = Vector2D(x: 1.0, y: 1.0)
+  let vector2 = Vector2D(x: 1.0, y: 1.0)
+  
+  print(vector1 == vector2)//true
+  ```
+
+  
+
+- Swift 为以下自定义类型提供等价运算符合成实现:
+
+  - 只拥有遵循 Equatable 协议存储属性的结构体
+
+    ```swift
+    struct Vector3D: Equatable {
+        var x = 0.0, y = 0.0, z = 0.0
+    }
+    
+    let vector3D1 = Vector3D(x: 1.0, y: 2.0, z: 3.0)
+    let vector3D2 = Vector3D(x: 1.0, y: 2.0, z: 3.0)
+    
+    print(vector3D1 == vector3D2)//true
+    ```
+
+    
+
+  - 只拥有遵循 Equatable 协议关联类型的枚举 
+
+    ```
+    
+    ```
+
+    
+
+  - 没有关联类型的枚举
+
+    ```swift
+    enum NetworkType {
+        case wifi
+        case _4G
+        case _3G
+        case _2G
+        case Unknown
+    }
+    
+    let type1 = NetworkType.wifi
+    let type2 = NetworkType._2G
+    let type3 = NetworkType.wifi
+    
+    print(type1 == type2)//false
+    print(type1 == type3)//true
+    ```
+
+    
+
+## 自定义运算符
+
+- 除了实现标准运算符，在 Swift 当中还可以声明和实现自定义运算符(custom operators)。
+- 新的运算符要在全局作用域内，使用 operator 关键字进行声明，同时还要指定 prefix 、infix 或者 postfix 限定符。
+
+### 自定义前缀运算符
+
+```swift
+struct Vector2D {
+    var x = 0.0, y = 0.0
+}
+
+prefix operator +++
+
+extension Vector2D {
+    static prefix func +++ (vector: inout Vector2D) -> Vector2D {
+        vector = Vector2D(x: vector.x + vector.x, y: vector.y + vector.y)
+        return vector
+    }
+}
+
+var vector = Vector2D(x: 1.0, y: 1.0)
+let v2 = +++vector
+print(v2)//Vector2D(x: 2.0, y: 2.0)
+```
+
+### 自定义中缀运算符
+
+```swift
+struct Vector2D {
+    var x = 0.0, y = 0.0
+}
+
+infix operator +-: AdditionPrecedence
+
+extension Vector2D {
+    static func +- (left: Vector2D, right: Vector2D) -> Vector2D {
+        return Vector2D(x: left.x + right.x, y: left.y - right.y)
+    }
+}
+
+let v1 = Vector2D(x: 1.0, y: 2.0)
+let v2 = Vector2D(x: 3.0, y: 5.0)
+let v3 = v1 +- v2
+print(v3)//Vector2D(x: 2.0, y: 2.0)
+```
+
+
+
+### 自定义中缀运算符的优先级和结合性
+
+- 自定义的中缀( infix )运算符也可以指定优先级和结合性
+- 每一个自定义的中缀运算符都属于一个优先级组 
+- 优先级组指定了自定义中缀运算符和其他中缀运算符的关系
+
+```swift
+struct Vector2D {
+    var x = 0.0, y = 0.0
+}
+
+infix operator +-: AdditionPrecedence
+
+extension Vector2D {
+    static func +- (left: Vector2D, right: Vector2D) -> Vector2D {
+        return Vector2D(x: left.x + right.x, y: left.y - right.y)
+    }
+}
+
+infix operator *^: MultiplicationPrecedence //乘法组合优先权大于加法
+
+extension Vector2D {
+    static func *^ (left: Vector2D, right: Vector2D) -> Vector2D {
+        return Vector2D(x: left.x * right.x, y: left.y * left.y + right.y * right.y)
+    }
+}
+
+let v1 = Vector2D(x: 1.0, y: 2.0)
+let v2 = Vector2D(x: 3.0, y: 5.0)
+let v3 = Vector2D(x: 2.0, y: 2.0)
+let result = v1 +- v2 *^ v3
+
+print(result)//Vector2D(x: 7.0, y: -27.0)
+```
+
+```
+struct Vector2D {
+    var x = 0.0, y = 0.0
+}
+
+infix operator +-: AdditionPrecedence
+
+extension Vector2D {
+    static func +- (left: Vector2D, right: Vector2D) -> Vector2D {
+        return Vector2D(x: left.x + right.x, y: left.y - right.y)
+    }
+}
+
+infix operator *^: MyPrecedence
+precedencegroup MyPrecedence {
+    associativity: left
+    lowerThan: AdditionPrecedence //自定义运算符的优先级小于加法
+}
+
+extension Vector2D {
+    static func *^ (left: Vector2D, right: Vector2D) -> Vector2D {
+        return Vector2D(x: left.x * right.x, y: left.y * left.y + right.y * right.y)
+    }
+}
+
+let v1 = Vector2D(x: 1.0, y: 2.0)
+let v2 = Vector2D(x: 3.0, y: 5.0)
+let v3 = Vector2D(x: 2.0, y: 2.0)
+let result = v1 +- v2 *^ v3
+
+print(result)//Vector2D(x: 8.0, y: 13.0)
+```
+
