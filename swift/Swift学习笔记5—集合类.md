@@ -501,7 +501,7 @@ print(array.joined(separator: ","))
 
 - 栈( Stack )是一种后入先出( Last in First Out )的数据结构，仅限定在栈顶进行插 入或者删除操作。栈结构的实际应用主要有数制转换、括号匹配、表达式求值等等。
 
-  ![](/Users/Brooks/blog/blogs/swift/Stack.png)
+  ![](https://github.com/BrooksWon/Blogs/blob/master/swift/Stack.png)
 
   ```swift
   ///使用数组实现栈
@@ -546,7 +546,7 @@ print(array.joined(separator: ","))
 
 - 队列在生活中非常常见。排队等位吃饭、在火车站买票、通过高速路口等，这些生活中 的现象很好的描述了队列的特点:先进先出 ( FIFO, first in first out )，排在最前面的 先出来，后面来的只能排在最后面。
 
-  ![Queue](/Users/Brooks/blog/blogs/swift/Queue.png)
+  ![](https://github.com/BrooksWon/Blogs/blob/master/swift/Queue.png)
 
   ```swift
   ///使用数组实现队列
@@ -769,7 +769,7 @@ print(persons.count)//2
 
 ### 2.3 执行Set计算和判断
 
-### ![基本Set操作](/Users/Brooks/blog/blogs/swift/set.png)
+### ![基本Set操作](https://github.com/BrooksWon/Blogs/blob/master/swift/set.png)
 
 #### 2.3.1 基本 Set 操作的定义
 
