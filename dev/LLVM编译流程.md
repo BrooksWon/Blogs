@@ -10,7 +10,7 @@
 
 ## 2. 传统的编译器架构
 
-![page4image14244144.png](/Users/Brooks/Library/Application Support/typora-user-images/page4image14244144.png) 
+![compiler](/Users/Brooks/blog/blogs/dev/compiler.png)
 
 - Frontend: 前端
   - 词法分析、语法分析、语义分析、生成中间代码
@@ -21,7 +21,7 @@
 
 ## 3. LLVM 架构
 
-![page5image14572656.png](/Users/Brooks/Library/Application Support/typora-user-images/page5image14572656.png) 
+ ![llvm](/Users/Brooks/blog/blogs/dev/llvm.png)
 
 - 不同的前端后端使用统一的中间代码LLVM Intermediate Representation (**LLVM IR**)
 - 如果需要支持一种新的编程语言，那么只需要实现一个新的前端
@@ -45,20 +45,20 @@
 
 #### 3.2 Clang与LLVM
 
-![page7image14274416.png](/Users/Brooks/Library/Application Support/typora-user-images/page7image14274416.png) 
+![llvm编译流程1](/Users/Brooks/blog/blogs/dev/llvm编译流程1.png) 
 
 - 广义的LLVM：整个LLVM架构
 - 狭义的LLVM：LLVM后端(代码优化、目标代码生成等)
 
 ## 4. LLVM 编译流程
 
-![page7image14278576.png](/Users/Brooks/Library/Application Support/typora-user-images/page7image14278576.png) 
+![llvm编译流程2](/Users/Brooks/blog/blogs/dev/llvm编译流程2.png)
 
 ### 4.1 Objective-C 源文件的编译过程
 
 - 命令行查看编译的过程:$ clang -ccc-print-phases main.m
 
-  ![page8image14156608.png](/Users/Brooks/Library/Application Support/typora-user-images/page8image14156608-0240693.png) 
+  ![](/Users/Brooks/blog/blogs/dev/page8image14156608-0240693.png) 
 
 - ```
   0: input, "main.m", objective-c//引入源文件
@@ -88,7 +88,7 @@
 
   - 执行上述命令后的结果
 
-    ![page9image14493856.png](/Users/Brooks/Library/Application Support/typora-user-images/page9image14493856.png) 
+    ![](/Users/Brooks/blog/blogs/dev/page9image14493856.png) 
 
     结果显示：**词法分析会把字母、小括号、逗号、大括号、操作符、分号等生成 token，并指出token对应的源代码在源文件中的所在行号和所在行的具体位置**。
 
@@ -106,7 +106,7 @@
 
   - 执行上述命令行后的结果：
 
-    ![page10image14168672.png](/Users/Brooks/Library/Application Support/typora-user-images/page10image14168672.png) 
+    ![](/Users/Brooks/blog/blogs/dev/page10image14168672.png) 
 
     转换成树状图如下：
 
@@ -140,7 +140,7 @@
 
 - 将源代码生成 text 格式的 IR， 结果如下：
 
-  ![page12image14157648.png](/Users/Brooks/Library/Application Support/typora-user-images/page12image14157648.png) 
+  ![](/Users/Brooks/blog/blogs/dev/page12image14157648.png) 
 
   根据 IR 的语法，对生成的 IR 做一下解读：
 
@@ -213,11 +213,11 @@
 
 然后，
 
-![page15image30427104.png](/Users/Brooks/Library/Application Support/typora-user-images/page15image30427104.png) 
+![](/Users/Brooks/blog/blogs/dev/page15image30427104.png) 
 
-![page15image30425312.png](/Users/Brooks/Library/Application Support/typora-user-images/page15image30425312.png) 
+![](/Users/Brooks/blog/blogs/dev/page15image30425312.png) 
 
-![page15image30436848.png](/Users/Brooks/Library/Application Support/typora-user-images/page15image30436848.png) 
+![](/Users/Brooks/blog/blogs/dev/page15image30436848.png) 
 
 
 
