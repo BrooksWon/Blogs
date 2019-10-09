@@ -423,7 +423,7 @@ print(instance.x)//100
 
 - 这个语法的好处在于通过写普通表达式代替显式闭包而使你省略包围函数形式参数的括号。
 
-  ![自动闭包](/Users/Brooks/blog/blogs/swift/自动闭包.png)
+  ![](https://github.com/BrooksWon/Blogs/blob/master/swift/%E8%87%AA%E5%8A%A8%E9%97%AD%E5%8C%85.png)
 
 - 自动闭包允许你延迟处理，因此闭包内部的代码直到你调用它的时候才会运行。对于有副作用或者占用资源的代码来说很有用，因为它可以允许你控制代码何时才进行求值。
 
@@ -486,7 +486,7 @@ print(instance.x)//100
 
 - 对于原始集合里的每一个元素，以一个变换后的元素替换之形成一个新的集合
 
-  ![](/Users/Brooks/blog/blogs/swift/map.png)
+  ![](https://github.com/BrooksWon/Blogs/blob/master/swift/map.png)
 
   ```swift
   let results = [2.0, 4.0, 5.0, 7.0]
@@ -500,7 +500,7 @@ print(instance.x)//100
 
 - 对于原始集合里的每一个元素，通过判定来将其丢弃或者放进新集合
 
-  ![](/Users/Brooks/blog/blogs/swift/filter.png)
+  ![](https://github.com/BrooksWon/Blogs/blob/master/swift/filter.png)
 
   ```swift
   let results = [1, 4, 10, 15]
@@ -514,7 +514,7 @@ print(instance.x)//100
 
 - 对于原始集合里的每一个元素，作用于当前累积的结果上
 
-  ![](/Users/Brooks/blog/blogs/swift/reduce.png)
+  ![](https://github.com/BrooksWon/Blogs/blob/master/swift/reduce.png)
 
   ```swift
   let results = [2.0, 4.0, 5.0, 7.0]
