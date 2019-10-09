@@ -1,5 +1,7 @@
 # Swift学习笔记6—函数和闭包
 
+[TOC]
+
 
 
 ## 1. 函数
@@ -608,3 +610,47 @@ print(instance.x)//100
       return wordDic
   }
   ```
+
+
+
+## 5. 函数编程 2
+
+假设我们有一个名字列表，其中一些条目由单个字符构成。现在的任务是，将除去单字符条目之外的列表内容，放在一个逗号分隔的字符串里返回，且每个名字的首字母都要大写。
+
+- 命令式解法
+  - 命令式编程是按照“程序是一系列改变状态的命令”来建模的一种编程风格。传统的 for 循 环是命令式风格的绝好例子:先确立初始状态，然后每次迭代都执行循环体中的一系列命令。
+
+```swift
+let employee = ["jack", "s", "m", "stu", "bob"]
+func cleanNames(names: Array<String>) -> String {
+    var cleanNames = ""
+    for name in names {
+        if name.count > 1 {
+            cleanNames += ( name.first!.uppercased() + name.dropFirst() ) + ","
+        }
+    }
+    cleanNames.dropLast()
+    return cleanNames
+}
+
+print(cleanNames(names: employee))
+```
+
+- 函数式解法
+  - 函数式编程将程序描述为表达式和变换，以数学方程的形式建立模型，并且尽量避免可变的 状态。函数式编程语言对问题的归类不同于命令式语言。如前面所用到的几种操作 (filter、transform、convert)，每一种都作为一个逻辑分类由不同的函数所代表，这些 函数实现了低层次的变换，但依赖于开发者定义的高阶函数作为参数来调整其低层次运转机 构的运作。
+
+```swift
+let employee = ["jack", "s", "m", "stu", "bob"]
+
+let cleanNames = employee.filter(){ $0.count > 1 }
+    .map{ $0.first!.uppercased() + $0.dropFirst() }
+    .joined(separator: ",")
+
+print(cleanNames)
+```
+
+### 5.1 具有普遍意义的基本构造单元
+
+- 筛选（filter）
+- 映射（map）
+- 折叠 / 化约（foldLeft / reduce）等
