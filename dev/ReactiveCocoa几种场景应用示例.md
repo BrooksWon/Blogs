@@ -173,7 +173,74 @@ UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]init];
 RAC(_label,text) = self.textField.rac_textSignal;
 ```
 
-## 11. 登录界面的一些信号和响应
+## 11. RACSignal 的 zipWith、concat、bind 操作
+
+```objective-c
+        RACSignal *signal = [RACSignal createSignal:
+                             ^RACDisposable *(id<RACSubscriber> subscriber)
+        {
+            [subscriber sendNext:@1];
+            [subscriber sendNext:@2];
+            [subscriber sendCompleted];
+            return [RACDisposable disposableWithBlock:^{
+                NSLog(@"signal dispose 数字");
+            }];
+        }];
+
+
+        RACSignal *signals = [RACSignal createSignal:
+                             ^RACDisposable *(id<RACSubscriber> subscriber)
+        {
+            [subscriber sendNext:@"A"];
+            [subscriber sendNext:@"B"];
+            [subscriber sendNext:@"C"];
+            [subscriber sendCompleted];
+            return [RACDisposable disposableWithBlock:^{
+                NSLog(@"signal dispose 字母");
+            }];
+        }];
+        
+        //concat操作就是把两个信号合并起来。注意合并有先后顺序。
+        /*
+         1.这里有二点需要注意的是：只有当第一个信号完成之后才能收到第二个信号的值，因为第二个信号是在第一个信号completed的闭包里面订阅的，所以第一个信号不结束，第二个信号也不会被订阅。
+         2.两个信号concat在一起之后，新的信号的结束信号在第二个信号结束的时候才结束。看上图描述，新的信号的发送长度等于前面两个信号长度之和，concat之后的新信号的结束信号也就是第二个信号的结束信号。
+         
+         concat是有序的组合，第一个信号完成之后才发送第二个信号。
+         */
+        RACSignal *concatSignal = [signal concat:signals];
+        [concatSignal subscribeNext:^(id  _Nullable x) {
+            NSLog(@"concatSignal subscribe value = %@", x);
+        } completed:^{
+            NSLog(@"concatSignal 完成");
+        }];
+        
+        
+    //当把两个信号通过zipWith之后，就像上面的那张图一样，拉链的两边被中间的拉索拉到了一起。既然是拉链，那么一一的位置是有对应的，上面的拉链第一个位置只能对着下面拉链第一个位置，这样拉链才能拉到一起去。
+        RACSignal *zipSignal = [signal zipWith:signals];
+        [zipSignal subscribeNext:^(id  _Nullable x) {
+            NSLog(@"zipSignal subscribe value = %@", x);
+
+        } completed:^{
+            NSLog(@"zipSignal 完成");
+        }];
+        
+        //为当前信号延迟绑定一个block。 Lazily binds a block to the values in the receiver.
+        RACSignal *bindSignal = [signal bind:^RACSignalBindBlock _Nonnull{
+            return ^RACSignal *(NSNumber *value, BOOL *stop){
+                value = @(value.intValue * 2);
+                return [RACSignal return:value];
+            };
+        }];
+        [bindSignal subscribeNext:^(id  _Nullable x) {
+            NSLog(@"bindSignal subscribe value = %@", x);
+        } completed:^{
+            NSLog(@"bindSignal 完成");
+        }];
+```
+
+
+
+## 12. 登录界面的一些信号和响应
 
 ![login](/Users/Brooks/blog/blogs/dev/login.png)
 
@@ -216,3 +283,6 @@ RAC(_label,text) = self.textField.rac_textSignal;
 @end
 ```
 
+
+
+参考链接：https://www.jianshu.com/p/d7d951a99db8
