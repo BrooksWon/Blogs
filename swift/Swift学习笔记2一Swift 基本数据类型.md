@@ -58,7 +58,7 @@ print("\(welcomeMsg)")
 
 ## Swift 中常见数据类型，如下图所示：
 
-![swift常见数据类型](/Users/Brooks/Desktop/swift常见数据类型.png)
+![swift常见数据类型](https://github.com/BrooksWon/Blogs/blob/master/swift/swift%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png)
 
 ### 整型
 
