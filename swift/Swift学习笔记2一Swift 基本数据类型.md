@@ -1,4 +1,4 @@
-# Swift学习笔记2一Swift 基本数据类型
+# Swift学习笔记2一Swift 常见数据类型
 
 ## 变量和常量
 
@@ -56,7 +56,9 @@ print("\(welcomeMsg)")
 
 
 
-## 基本数据类型
+## Swift 中常见数据类型，如下图所示：
+
+![swift常见数据类型](/Users/Brooks/Desktop/swift常见数据类型.png)
 
 ### 整型
 
