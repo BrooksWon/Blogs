@@ -17,7 +17,7 @@
 4. [Swift学习笔记4—流程控制](https://github.com/BrooksWon/Blogs/blob/master/swift/Swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04%E2%80%94%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6.md)
 5. [Swift学习笔记5—集合类](https://github.com/BrooksWon/Blogs/blob/master/swift/Swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05%E2%80%94%E9%9B%86%E5%90%88%E7%B1%BB.md)
 6. [Swift学习笔记6—函数和闭包](https://github.com/BrooksWon/Blogs/blob/master/swift/Swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06%E2%80%94%E5%87%BD%E6%95%B0%E5%92%8C%E9%97%AD%E5%8C%85.md)
-7. [Swift学习笔记6—函数和闭包](https://github.com/BrooksWon/Blogs/blob/master/swift/Swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06%E2%80%94%E5%87%BD%E6%95%B0%E5%92%8C%E9%97%AD%E5%8C%85.md)
+7. [Swift学习笔记7—面向对象编程](https://github.com/BrooksWon/Blogs/blob/master/swift/Swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06%E2%80%94%E5%87%BD%E6%95%B0%E5%92%8C%E9%97%AD%E5%8C%85.md)
 
 ## 算法
 
