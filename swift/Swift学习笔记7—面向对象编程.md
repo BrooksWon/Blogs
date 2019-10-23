@@ -1,5 +1,9 @@
 # Swift学习笔记7—面向对象编程
 
+[TOC]
+
+
+
 ## 1. Swift面向对象概述
 
 ### 1.1 面向对象的三大特性
@@ -737,7 +741,7 @@ convenience init(parameters) {
 - 便捷初始化器必须从相同的类里调用另一个初始化器。
 - 便捷初始化器最终必须调用一个指定初始化器。
 
-![](/Users/Brooks/blog/blogs/swift/page58image24519616.png) 
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/page58image24519616.png) 
 
 #### 8.7.3 两段式初始化
 
@@ -788,14 +792,14 @@ t.showInfo()//zhangsan老师 30 5000.0
 
 ##### 8.7.3.2 两段式初始化过程-阶段1
 
-![](/Users/Brooks/blog/blogs/swift/page66image24616464.png) 
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/page66image24616464.png) 
 
 8.7.3.3 两段式初始化过程-阶段2
 
 1. 从顶部初始化器往下，链中的每一个指定初始化器都有机会进一步定制实例。初始化器现在 能够访问 self 并且可以修改它的属性，调用它的实例方法等等;
 2. 最终，链中任何便捷初始化器都有机会定制实例以及使用 slef 。
 
-![](/Users/Brooks/blog/blogs/swift/page67image24385840.png) 
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/page67image24385840.png) 
 
 #### 8.8 初始化器的继承和重写
 
