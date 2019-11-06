@@ -1063,6 +1063,70 @@ print(UnsafePointer(&size))//0x100002388
 
 
 
+**逃逸闭包 @escaping**
+
+非逃逸闭包、逃逸闭包，一般都是当做参数传递给函数。
+
+非逃逸闭包：闭包调用发生在函数结束前，闭包调用在函数作用域内。
+
+逃逸闭包：闭包有可能在函数结束后调用，闭包调用逃离了函数的作用域，需要通过 **@escaping **声明。
+
+如下示例：
+
+```
+import Dispatch
+typealias Fn = () -> ()
+
+// fn 是非逃逸闭包
+func test1(_ fn: Fn) {
+    fn()
+}
+
+// fn 是逃逸闭包
+var gFn: Fn?
+func test2(_ fn: @escaping Fn) {
+    gFn = fn
+}
+
+// fn 是逃逸闭包
+func test3(_ fn: @escaping Fn)  {
+    DispatchQueue.global().async {
+        fn()
+    }
+}
+```
+
+再来一个例子:
+
+```swift
+import Dispatch
+typealias Fn = () -> ()
+class Person {
+    var fn: Fn
+    
+    //fn 是逃逸闭包
+    init(fn: @escaping Fn) {
+        self.fn = fn
+    }
+    
+    func run() {
+        //
+        //它用到了实例成员(属性、方法), 编译器会强制要求明确写出self.
+        DispatchQueue.global().async {
+            self.fn()
+        }
+    }
+}
+```
+
+
+
+**逃逸闭包的注意点**
+
+逃逸闭包不可以捕获inout参数。
+
+
+
 ## 属性
 
 Swift中跟实例相关的属性可以分为两大类：
