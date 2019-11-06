@@ -164,67 +164,241 @@ test()
 
 
 
-**逃逸闭包 @escaping**
+**内存访问冲突**
 
-非逃逸闭包、逃逸闭包，一般都是当做参数传递给函数。
+内存访问冲突还在2个访问满足下列条件时发生：
 
-非逃逸闭包：闭包调用发生在函数结束前，闭包调用在函数作用域内。
-
-逃逸闭包：闭包有可能在函数结束后调用，闭包调用逃离了函数的作用域，需要通过 **@escaping **声明。
+- 至少一个是写操作。
+- 它们访问的是同一块内存。
+- 它们的访问时间重叠（比如在同一个函数内）。
 
 如下示例：
 
-```
-import Dispatch
-typealias Fn = () -> ()
-
-// fn 是非逃逸闭包
-func test1(_ fn: Fn) {
-    fn()
+```swift
+// 存在内存访问冲突
+// Simultaneous accesses to 0x100001198, but modification requires exclusive access
+var step = 1
+func increment(_ num: inout Int) {
+    num += step // 同时读写一块内存空间,因才会冲突
 }
-
-// fn 是逃逸闭包
-var gFn: Fn?
-func test2(_ fn: @escaping Fn) {
-    gFn = fn
-}
-
-// fn 是逃逸闭包
-func test3(_ fn: @escaping Fn)  {
-    DispatchQueue.global().async {
-        fn()
-    }
-}
+increment(&step)
 ```
 
-再来一个例子:
+如何解决上面代码的内存访问冲突，如下即可：
 
 ```swift
-import Dispatch
-typealias Fn = () -> ()
-class Person {
-    var fn: Fn
-    
-    //fn 是逃逸闭包
-    init(fn: @escaping Fn) {
-        self.fn = fn
-    }
-    
-    func run() {
-        //
-        //它用到了实例成员(属性、方法), 编译器会强制要求明确写出self.
-        DispatchQueue.global().async {
-            self.fn()
-        }
+// 解决内存访问冲突
+var copyOfStep = step
+increment(&copyOfStep)
+step = copyOfStep
+```
+
+
+
+如果下面的条件可以满足， 就说明重叠方法结构体的属性是安全的。
+
+- 你只访问实例存储属性，不是计算属性或者类属性。
+- 结构体是局部变量而非全局变量。
+- 结构体要么没有闭包捕获，要么只被非逃逸闭包捕获。
+
+
+
+**指针**
+
+Swift中也有专门的指针类型，这些都被定性为 **Unsafe**（不安全的），常见的有以下4种类型：
+
+- **UnsafePointer<Pointee>** 类似于 const Pointee *
+- **UnsafeMutablePointer<Pointee>** 类似于 Pointee *
+- **UnsafeRawPointer** 类似于 const void *
+- **UnsafeMutableRawPointer** 类似于 void *
+
+如下示例：
+
+```swift
+var age = 10
+func test1(_ ptr: UnsafeMutablePointer<Int>) {
+    ptr.pointee += 10
+}
+func test2(_ ptr: UnsafePointer<Int>) {
+    print(ptr.pointee)
+}
+test1(&age)
+test2(&age) // 20
+print(age) // 20
+
+var num = 5
+func test3(_ ptr: UnsafeMutableRawPointer) {
+    ptr.storeBytes(of: 11, as: Int.self)
+}
+func test4(_ ptr: UnsafeRawPointer) {
+    print(ptr.load(as: Int.self))
+}
+test3(&num)
+test4(&num) // 11
+print(num) // 11
+```
+
+
+
+**指针的应用示例**
+
+```swift
+var arr = NSArray(objects: 11, 22, 33, 44)
+arr.enumerateObjects { (obj, index, stop) in
+    print(index, obj)
+    if index == 2 {
+        stop.pointee = true
     }
 }
 ```
 
 
 
-**逃逸闭包的注意点**
+**获得指向某个变量的指针**
 
-逃逸闭包不可以捕获inout参数。
+```swift
+var age = 11
+var ptr1 = withUnsafeMutablePointer(to: &age) { $0 }
+var ptr2 = withUnsafePointer(to: &age) { $0 }
+
+ptr1.pointee = 22
+print(ptr2.pointee) // 22
+print(age) // 22
+
+var ptr3 = withUnsafeMutablePointer(to: &age) { UnsafeMutableRawPointer($0) }
+var ptr4 = withUnsafePointer(to: &age) { UnsafeRawPointer($0) }
+ptr3.storeBytes(of: 33, as: Int.self)
+print(ptr4.load(as: Int.self)) // 33
+print(age) // 33
+
+```
 
 
+
+**获得指向堆空间实例的指针**
+
+```swift
+class Person {}
+var person = Person()
+
+var ptr = withUnsafePointer(to: &person) { UnsafeRawPointer($0) }
+var heapPtr = UnsafeRawPointer(bitPattern: ptr.load(as: UInt.self))
+print(heapPtr!)
+print(heapPtr!)
+```
+
+
+
+**创建指针**
+
+示例1
+
+```swift
+var ptrX = UnsafeRawPointer(bitPattern: 0x100001234)
+
+// 创建
+var ptr = malloc(16)
+// 存
+ptr?.storeBytes(of: 10, as: Int.self)
+ptr?.storeBytes(of: 20, toByteOffset: 8, as: Int.self)
+// 取
+print((ptr?.load(as: Int.self))!) // 10
+print((ptr?.load(fromByteOffset: 8, as: Int.self))!) // 20
+// 销毁
+free(ptr)
+
+```
+
+
+
+示例2
+
+```swift
+// 创建
+var ptr = UnsafeMutablePointer<Int>.allocate(capacity: 3)
+
+//存
+ptr.initialize(to: 11)
+ptr.successor().initialize(to: 22)
+ptr.successor().successor().initialize(to: 33)
+
+
+// 取
+print(ptr.pointee) // 11
+print((ptr + 1).pointee) // 22
+print((ptr + 2).pointee) // 33
+
+print(ptr[0]) // 11
+print(ptr[1]) // 22
+print(ptr[2]) // 33
+
+// 销毁
+ptr.deinitialize(count: 3)
+ptr.deallocate()
+```
+
+
+
+示例3
+
+```swift
+class Person {
+    var age: Int
+    var name: String
+    init(age: Int, name: String) {
+        self.age = age
+        self.name = name
+    }
+    deinit {
+        print(name ,"deinit")
+    }
+}
+
+// 创建
+var ptr = UnsafeMutablePointer<Person>.allocate(capacity: 3)
+
+//存
+ptr.initialize(to: Person(age: 10, name: "Jack"))
+(ptr + 1).initialize(to: Person(age: 11, name: "Rose"))
+(ptr + 2).initialize(to: Person(age: 12, name: "Kate"))
+
+//Jack deinit
+//Rose deinit
+//Kate deinit
+
+// 销毁
+ptr.deinitialize(count: 3)
+ptr.deallocate()
+```
+
+
+
+**指针之间的转换**
+
+```swift
+// 创建
+var ptr = UnsafeMutableRawPointer.allocate(byteCount: 16, alignment: 1)
+
+//存
+ptr.assumingMemoryBound(to: Int.self).pointee = 11
+(ptr + 8).assumingMemoryBound(to: Double.self).pointee = 22.0
+
+//取
+print(unsafeBitCast(ptr, to: UnsafePointer<Int>.self).pointee)//11
+print(unsafeBitCast(ptr + 8, to: UnsafePointer<Double>.self).pointee)//22.0
+
+// 销毁
+ptr.deallocate()
+```
+
+
+
+**unsafeBitCast** 是忽略数据类型的强制转换，不会因为数据类型的变化而改变原来的内存数据。类似于 C++ 中的 **reinterpret_cast**
+
+```swift
+class Person {}
+var p = Person()
+var ptr = unsafeBitCast(p, to: UnsafeRawPointer.self)
+print(ptr)
+```
 
