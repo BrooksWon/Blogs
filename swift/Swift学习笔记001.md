@@ -6,9 +6,9 @@
 
 **基于Swift5.1的学习笔记**
 
-- Swift完全开源: https://github.com/apple/swift，主要采用C++编写  
+- Swift完全开源:  *https://github.com/apple/swift* ， 主要采用C++编写  
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191031_11.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191031_11.png)
 
 
 
@@ -117,7 +117,7 @@ lldb常用指令：
 
 **学习过程的思维导图如下**：
 
-![](/Users/Brooks/blog/blogs/swift/Swift学习笔记.png)
+![]([Swift学习笔记.png](https://github.com/BrooksWon/Blogs/blob/master/swift/Swift学习笔记.png))
 
 ## 基础语法
 
@@ -475,7 +475,7 @@ print(result)
 
 
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191103_8.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_8.png)
 
 显然，**result 只占用1个字节大小，且内存中存储的就是枚举case对应的值。因为只有1个字节，所以最多能存储256种case**。
 
@@ -498,7 +498,7 @@ print(result)
 
 
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191103_10.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_10.png)
 
 看图可知，result 只占用1个字节大小，且内存中存储的就是枚举case对应的值。因为只有1个字节，所以最多能存储256种case。和 **第1种情况的结果一样**。
 
@@ -524,7 +524,7 @@ print(result)
 
 
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191103_15_1.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_15_1.png)
 
 从图中可以看出，result 占用25个字节大小，内存中前24个字节存储的就是枚举test1关联的值（1、2、3），最后1个字节存储的是枚举的第几个case（示例代码中是test1、因此该处存储的值为0）、因为只用1个字节存储case的情况种类，所以最多能存储256种case。
 
@@ -534,7 +534,7 @@ print(result)
 
 test2 时—>
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191103_16.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_16.png)
 
 从图中可以看出，result 占用25个字节大小，内存中前16个字节存储的就是枚举test2关联的值（5、6），第25个字节存储的是枚举的第几个case（示例代码中是test2、因此该处存储的值为1）、因为只用1个字节存储case的情况种类，所以最多能存储256种case。
 
@@ -542,7 +542,7 @@ test2 时—>
 
 test3 时—>
 
-![img](/Users/Brooks/blog/blogs/swift/Snip20191103_17.png)
+![img](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_17.png)
 
 从图中可以看出，result 占用25个字节大小，内存中前2个字节存储的就是枚举test3关联的值（AB），第25个字节存储的是枚举的第几个case（示例代码中是test3、因此该处存储的值为2）、因为只用1个字节存储case的情况种类，所以最多能存储256种case。
 
@@ -550,7 +550,7 @@ test3 时—>
 
 test4 时—>
 
-![img](/Users/Brooks/blog/blogs/swift/Snip20191103_18.png)
+![img](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_18.png)
 
 从图中可以看出，result 占用25个字节大小，内存中第1个字节存储的就是枚举test4关联的值（1，Bool值为true时，内存存储的是1），第25个字节存储的是枚举的第几个case（示例代码中是test4、因此该处存储的值为3）、因为只用1个字节存储case的情况种类，所以最多能存储256种case。
 
@@ -558,7 +558,7 @@ test4 时—>
 
 test5 时—>
 
-![img](/Users/Brooks/blog/blogs/swift/Snip20191103_19.png)
+![img](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_19.png)
 
 从图中可以看出，result 占用25个字节大小，因为test5没有关联值、所以前24个字节空着，第25个字节存储的是枚举的第几个case（示例代码中是test5、因此该处存储的值为4）、因为只用1个字节存储case的情况种类，所以最多能存储256种case。
 
@@ -805,7 +805,7 @@ var p = Point()
 
 怎么看出来的呢？我们可以看一下两段源码的反汇编代码。如下：
 
-![](/Users/Brooks/blog/blogs/swift/init汇编1.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/init%E6%B1%87%E7%BC%961.png)
 
 
 
@@ -813,7 +813,7 @@ var p = Point()
 
 下面进入`init()` 调用内部：
 
-![](/Users/Brooks/blog/blogs/swift/init汇编2.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/init%E6%B1%87%E7%BC%962.png)
 
 
 
@@ -895,7 +895,7 @@ func test() {
 }
 ```
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191101_9.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191101_9.png)
 
 
 
@@ -970,17 +970,17 @@ print(UnsafePointer(&size))//0x100002388
 
 可以猜测下这块内存里应该存着和Size对象相关的东西，**到底是什么呢？会不会是Size对象的内存地址呢？**我们验证下猜测、读取这块内存里前8个字节，如下图红色标注区。
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191101_91.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191101_91.png)
 
 
 
 当然，也可以使用命令 `x/1gx`读取前8个字节，如下：
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191101_11.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191101_11.png)
 
 接着、去 View Memory 查看下这个地址对应的内存空间里存储着什么东东？
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191101_13.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191101_13.png)
 
 
 
@@ -994,7 +994,7 @@ print(UnsafePointer(&size))//0x100002388
 
 总结：即使给size变量重新设置size对象，size变量本身的内存地址也不会改变，但是它的内存地址存储的**size对象的内存地址**会变化。看下图、一眼明了
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191101_14.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191101_14.png)
 
 
 
@@ -1511,9 +1511,7 @@ print(MemoryLayout.stride(ofValue: d))//8
 
 
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191103_1.png)
-
-![]()
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_1.png)
 
 从上图的红色标注区可以看出：
 
@@ -1536,7 +1534,7 @@ print(MemoryLayout.stride(ofValue: e))//8
 
 
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191103_2.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_2.png)
 
 依然从上图的红色标注区分析：
 
@@ -1633,7 +1631,7 @@ convenience init(parameters) {
 
 如下图所示：
 
-![](/Users/Brooks/blog/blogs/swift/README.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/README.png)
 
 这一套规则保证了 **使用任意初始化器，都可以完成地初始化实例。**
 
@@ -1672,13 +1670,13 @@ Swift在编码安全方面是煞费苦心，为了保证初始化过程的安全
 
 **第1阶段+安全检查**
 
-![Snip20191103_4](/Users/Brooks/blog/blogs/swift/Snip20191103_4.png)
+![Snip20191103_4](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_4.png)
 
 
 
 **第2阶段+安全检查**
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191103_5.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191103_5.png)
 
 
 
@@ -2092,7 +2090,9 @@ print(class_getSuperclass(Student.self)!) // Person
 print(class_getSuperclass(Person.self)!) // Swift._SwiftObject
 ```
 
-从结果看得出来，Swift还有个隐藏的基类：Swift._SwiftObject。可以参考Swift源码：https://github.com/apple/swift/blob/master/stdlib/public/runtime/SwiftObject.h
+从结果看得出来，Swift还有个隐藏的基类：Swift._SwiftObject。
+
+可以参考Swift源码：https://github.com/apple/swift/blob/master/stdlib/public/runtime/SwiftObject.h
 
 
 
