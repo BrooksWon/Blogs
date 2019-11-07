@@ -406,11 +406,11 @@ d.test2()
 
 d.test1()的调用流程，反汇编代码如下图所示：
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191107_20.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191107_20.png)
 
 d.test2()的调用流程，反汇编代码如下图所示：
 
-![](/Users/Brooks/blog/blogs/swift/Snip20191107_21.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/swift/Snip20191107_21.png)
 
 显然，test1()走的是runtime流程，test2（）不是。
 
