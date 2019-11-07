@@ -1,5 +1,9 @@
 # Swift学习笔记
 
+[TOC]
+
+
+
 **基于Swift5.1的学习笔记**
 
 - Swift完全开源: https://github.com/apple/swift，主要采用C++编写  
@@ -115,7 +119,7 @@ lldb常用指令：
 
 ![](/Users/Brooks/blog/blogs/swift/Swift学习笔记.png)
 
-# 1 基础语法
+## 基础语法
 
 - swift中一句代码尾部可以省略分号，多句代码写到同一行时必须用分号隔开
 - 用**var**定义变量，**let**定义常量，编译器能自动推断出变量/常量的类型
