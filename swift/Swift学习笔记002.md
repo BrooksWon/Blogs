@@ -402,3 +402,489 @@ var ptr = unsafeBitCast(p, to: UnsafeRawPointer.self)
 print(ptr)
 ```
 
+
+
+## 字面量（Literal）
+
+```swift
+var age = 10
+var isRed  = false
+var name = "Jack"
+```
+
+上面代码中的10、false、"Jack"就是字面量。
+
+
+
+**常见字面量的默认类型**
+
+```swift
+/// The default type for an otherwise-unconstrained integer literal.
+public typealias IntegerLiteralType = Int
+
+/// The default type for an otherwise-unconstrained floating point literal.
+public typealias FloatLiteralType = Double
+
+/// The default type for an otherwise-unconstrained Boolean literal.
+public typealias BooleanLiteralType = Bool
+
+/// The default type for an otherwise-unconstrained string literal.
+public typealias StringLiteralType = String
+```
+
+可以通过 **typealias** 修改字面量的默认类型。
+
+如下示例：
+
+```swift
+typealias FloatLiteralType = Float
+typealias IntegerLiteralType = Int8
+var age = 10 //Int8
+var height = 1.68 //Float
+```
+
+Swift 自带的绝大部分类型，都支持直接通过字面量进行初始化：Bool、Int、Float、Double、String、 Array、Dictionary、Set、Optional 等。
+
+
+
+**字面量协议**
+
+Swift自带类型之所以能够通过字面量初始化，是因为它们遵守了对应的协议。
+
+```swift
+Bool：ExpressibleByBooleanLiteral
+Int：ExpressibleByIntegerLiteral
+Float、Double：ExpressibleByIntegerLiteral、ExpressibleByFloatLiteral
+Dictionary：ExpressibleByDictionaryLiteral
+String：ExpressibleByStringLiteral
+Array、Set：ExpressibleByArrayLiteral
+Optional：ExpressibleByNilLiteral
+```
+
+
+
+**字面量协议应用**
+
+感受下面几个示例：
+
+示例1
+
+```swift
+extension Int: ExpressibleByBooleanLiteral {
+    public init(booleanLiteral value: Bool) {
+        self = value ? 1 : 0
+    }
+}
+
+var num: Int = true
+print(num) // 1
+```
+
+
+
+示例2
+
+```swift
+class Student: ExpressibleByIntegerLiteral, ExpressibleByFloatLiteral, ExpressibleByStringLiteral, CustomStringConvertible {
+    var name: String = ""
+    var score: Double = 0
+    required init(floatLiteral value: Double) {
+        self.score = value
+    }
+    required init(integerLiteral value: Int) {
+        self.score  = Double(value)
+    }
+    required init(stringLiteral value: String) {
+        self.name = value
+    }
+    required init(extendedGraphemeClusterLiteral value: String) {
+        self.name = value
+    }
+    required init(unicodeScalarLiteral value: String) {
+        self.name = value
+    }
+    
+    var description: String {
+        "name = \(name), score = \(score)"
+    }
+}
+
+var stu:Student = 90
+print(stu) // name = , score = 90.0
+stu = 98.5
+print(stu) // name = , score = 98.5
+stu = "Jack"
+print(stu) // name = Jack, score = 0.0
+```
+
+
+
+示例3
+
+```swift
+struct Point {
+    var x = 0.0, y = 0.0
+}
+extension Point: ExpressibleByArrayLiteral, ExpressibleByDictionaryLiteral {
+    init(arrayLiteral elements: Double...) {
+        guard elements.count > 0 else { return }
+        self.x = elements[0]
+        guard elements.count > 1 else { return }
+        self.y = elements[1]
+    }
+    init(dictionaryLiteral elements: (String, Double)...) {
+        for (k, v) in elements {
+            if k == "x" { self.x = v }
+            else if k == "y" { self.y = v }
+        }
+    }
+}
+
+var p: Point = [10.5, 20.5]
+print(p) // Point(x: 10.5, y: 20.5)
+p = ["x" : 11, "y" : 22]
+print(p) // Point(x: 11.0, y: 22.0)
+```
+
+
+
+## 模式匹配（Pattern）
+
+什么模式？
+
+模式是用于匹配的规则，比如switch的case、捕捉catch、if\guard\while\for语句的条件等。
+
+swift中的模式有：
+
+- 通配符模式（Wildcard Pattern）；
+- 标识符模式（Identifier Pattern）；
+- 值绑定模式（Value-Binding Pattern）；
+- 元组模式（Tuple Pattern）；
+- 枚举Case模式（Enumeration Case Pattern）；
+- 可选模式（Optional Pattern）；
+- 类型转换模式（Type-Casting Pattern）；
+- 表达式模式（Expression Pattern）。
+
+
+
+**通配符模式（Wildcard Pattern）**
+
+- `_ ` 匹配任何值。
+- `_?`  匹配任何非nil值。
+
+示例如下：
+
+```swift
+enum Life {
+    case human(name: String, age: Int?)
+    case animal(name: String, age: Int?)
+}
+func check(_ life: Life) {
+    switch life {
+    case .human(let name, _)://只要有名字即可, 忽略age
+        print("human", name)
+    case .animal(let name, _?):
+        print("animal", name)//有名字，且年龄不为nil
+    default:
+        print("other")
+    }
+}
+
+check(.human(name: "Rose", age: 20)) //human Rose
+check(.human(name: "Jack", age: nil))//human Jack
+check(.animal(name: "Dog", age: 5)) // animal Dog
+check(.animal(name: "Cat", age: nil))//other
+```
+
+
+
+**标识符模式（Identifier Pattern）**
+
+给对应的变量、常量名赋值。
+
+示例如下：
+
+```swift
+var age = 10
+let name = "Jack"
+```
+
+
+
+**值绑定模式（Value-Binding Pattern）**
+
+如下示例：
+
+```swift
+let point = (3 ,2)
+switch point {
+case let(x, y):
+    print("the point is at (\(x), \(y)).")
+}
+```
+
+
+
+**元组模式（Tuple Pattern）**
+
+如下示例：
+
+示例1
+
+```swift
+let ponits = [(0,0), (1,0), (2,0)]
+for (x, _) in points {
+    print(x)
+}
+```
+
+示例2
+
+```swift
+var scores = ["jack": 98, "rose": 100, "kate": 86]
+for (name, score) in scores {
+    print(name, score)
+}
+```
+
+示例3
+
+```swift
+let name: String? = "jack"
+let age = 18
+let info: Any = [1 ,2]
+switch (name, age, info) {
+case(_?, _, _ as String):
+    print("case")
+default:
+    print("default")
+}
+//default
+```
+
+
+
+**枚举Case模式（Enumeration Case Pattern）**
+
+**if** **case** 语句等价于只有1个case的switch语句。
+
+如下示例：
+
+示例1
+
+```swift
+let age = 2
+
+//原来的写法
+if age >=0 && age <= 9 {
+    print("[0, 9]")
+}
+
+//枚举Case模式的写法1：用在if语句中
+if case 0...9 = age {
+    print("[0, 9]")
+}
+
+//枚举Case模式的写法2：用在guard语句中
+guard case 0...9 = age else { return }
+print("[0, 9]")
+
+//上面的几种写法等价于下面的写法:
+switch age {
+case 0...9: print("[0, 9]")
+default: break
+}
+```
+
+示例2
+
+```swift
+let ages: [Int?] = [2, 3, nil, 5]
+for case nil in ages {// 匹配nil
+    print("有nil值")
+    break
+}//有nil值
+```
+
+示例3
+
+```swift
+let points = [(1, 0), (2, 1), (3, 0)]
+for case let (x, 0) in points { // 匹配第2个元素为0的项，并将第1和元素绑定到x上
+    print(x)
+}//1 3
+```
+
+
+
+**可选模式（Optional Pattern）**
+
+如下示例：
+
+示例1
+
+```swift
+let age: Int? = 42
+if case .some(let x) = age { print(x) } // 匹配age，当age不为nil时，绑定到x上；符合条件则打印x
+if case let x? = age { print(x) } // 匹配age，当age不为nil时，绑定到x上；符合条件则打印x
+```
+
+示例2
+
+```swift
+let ages: [Int?] = [nil, 2, 3, nil, 5]
+for case let age? in ages { // 匹配age，当age不为nil时，绑定到age上；符合条件则进入循环并打印age
+    print(age)
+}// 2 3 5
+```
+
+示例3
+
+```swift
+let ages: [Int?] = [nil, 2, 3, nil, 5]
+for item in ages {
+    if let age = item { // 当item不为nil时，绑定到age上；符合条件则进入if并打印age
+            print(age)
+
+    }
+}// 2 3 5 跟上面的效果是等价的
+```
+
+示例4
+
+```swift
+func check(_ num: Int?) {
+    switch num {
+    case 2?: print("2")
+    case 4?: print("4")
+    case 6?: print("6")
+    case _?: print("other")// 如果不为nil，则打印other
+    case _: print("nil")
+}
+```
+
+
+
+**类型转换模式（Type-Casting Pattern）**
+
+如下示例：
+
+示例1
+
+```swift
+let num: Any = 6
+switch num {
+case is Int:
+    //编译器依然认为num是Any类型
+    print("is Int", num)
+default: break
+}
+```
+
+示例2
+
+```swift
+class Animal {
+    func eat() {
+        print(type(of: self), "eat")
+    }
+}
+class Dog: Animal {
+    func run() {
+        print(type(of: self), "run")
+    }
+}
+class Cat: Animal {
+    func jump() {
+        print(type(of: self), "jump")
+    }
+}
+
+func check(_ animal: Animal) {
+    switch animal {
+    case let dog as Dog:
+        dog.eat()
+        dog.run()
+    case is Cat:
+        animal.eat()
+    default: break
+    }
+}
+
+//Dog eat
+//Dog run
+check(Dog())
+//Cat eat
+check(Cat())
+```
+
+
+
+**表达式模式（Expression Pattern）**
+
+表达式模式用在case中。
+
+如下示例：
+
+```swift
+let point = (1, 2)
+switch point {
+case (0, 0):
+    print("(0, 0) is at the origin")
+case (-2...2, -2...2):
+    print("(\(point.0), \(point.1)) is near the origin")
+default:
+    print("the point is at (\(point.0), \(point.1))")
+}
+```
+
+
+
+**自定义表达式模式**
+
+可以通重载运算符 ~= ， 自定义表达式模式的匹配规则。
+
+如下示例：
+
+```swift
+func isEven(_ i: Int) -> Bool {
+    i % 2 == 0
+}
+func isOdd(_ i: Int) -> Bool {
+    i % 2 != 0
+}
+extension Int {
+    static func ~= (pattern: (Int) -> Bool, value: Int) -> Bool {
+        pattern(value)
+    }
+}
+
+var age = 9
+switch age {
+case isEven:
+    print("偶数")
+case isOdd:
+    print("奇数")
+default: print("其他")
+}
+```
+
+
+
+**where**
+
+可以使用where为模式m匹配模式匹配增加匹配条件。
+
+如下示例；
+
+```swift
+var data = (10, "jack")
+switch data {
+case let (age, _) where age > 10:
+    print(data.1, "age > 10")
+case let (age, _) where age > 0:
+    print(data.1, "age > 0")
+default: break
+}
+```
+
