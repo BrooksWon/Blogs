@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:MVVM/MVVM.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MVP/MVP.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MVC-&#x53d8;&#x79cd;/MVC-&#x53d8;&#x79cd;.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MVC-Apple/MVC-Apple.xcodeproj">
+   </FileRef>
+</Workspace>
