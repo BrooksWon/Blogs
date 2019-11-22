@@ -693,10 +693,6 @@ int main(int argc, const char * argv[]) {
 
 执行结果如下图所示：
 
-![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_128.png)
-
-
-
 ![autorelease](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/autorelease.gif)
 
 结果显示：
