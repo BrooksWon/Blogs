@@ -12,7 +12,7 @@ CADisplayLink、NSTimer会对target产生强引用，如果target又对它们产
 
 循环引用图如下所示：
 
-![Snip20191120_111](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_111.png)
+![Snip20191120_111](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_111.png)
 
 怎么解决这个问题呢？解决方案如下：
 
@@ -56,7 +56,7 @@ CADisplayLink、NSTimer会对target产生强引用，如果target又对它们产
 
 使用代码对象解决循环引用的本质是：**VC强引用CADisplayLink/NSTimer，CADisplayLink/NSTimer强应用代理对象，代理对象弱引用VC**。如下图所示（CADisplayLink同NSTimer）：
 
-![Snip20191120_112](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_112.png)
+![Snip20191120_112](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_112.png)
 
 ①**使用普通的代理对象：代理对象继承自NSObject**。演示代码如下：
 
@@ -271,7 +271,7 @@ void timerFire(void *param)
 
 如下图所示：
 
-![Snip20191120_113](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_113.png)
+![Snip20191120_113](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_113.png)
 
 
 
@@ -286,13 +286,13 @@ void timerFire(void *param)
 
 如下图所示：
 
-![Snip20191120_115](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_115.png)
+![Snip20191120_115](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_115.png)
 
 
 
 注意：objc_msgSend能识别Tagged Pointer，比如NSNumber的intValue方法，直接从指针提取数据，节省了以前的调用开销。如下图所示：
 
-![Snip20191120_117](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_117.png)
+![Snip20191120_117](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_117.png)
 
 
 
@@ -305,7 +305,7 @@ void timerFire(void *param)
 
 如下图所示：
 
-![Snip20191120_114](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_114.png)
+![Snip20191120_114](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_114.png)
 
 
 
@@ -330,7 +330,7 @@ void timerFire(void *param)
 
 如下图所示：
 
-![Snip20191120_118](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_118.png)
+![Snip20191120_118](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_118.png)
 
 
 
@@ -400,7 +400,7 @@ union isa_t
 
 SideTable结构如下图所示：
 
-![Snip20191120_119](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_119.png)
+![Snip20191120_119](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_119.png)
 
 
 
@@ -557,14 +557,14 @@ static weak_entry_t *weak_entry_for_referent(weak_table_t *weak_table, objc_obje
 
 ①**AutoreleasePoolPage的结构**
 
-![Snip20191120_122](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_122.png)
+![Snip20191120_122](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_122.png)
 
 ​     
 
 - 每个AutoreleasePoolPage对象占用4096字节内存，除了用来存放它内部的成员变量，剩下的空间用来存放autorelease对象的地址。
 - 所有的AutoreleasePoolPage对象通过**双向链表**的形式连接在一起；如下：
 
-![Snip20191120_123](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_123.png)
+![Snip20191120_123](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_123.png)
 
 
 
@@ -693,11 +693,11 @@ int main(int argc, const char * argv[]) {
 
 执行结果如下图所示：
 
-![](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_128.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_128.png)
 
 
 
-![autorelease](/Users/Brooks/Downloads/autorelease.gif)
+![autorelease](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/autorelease.gif)
 
 结果显示：
 
@@ -733,11 +733,11 @@ iOS在主线程的Runloop中注册了2个Observer：
 
 如下图所示：
 
-![Snip20191120_129](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_129.png)
+![Snip20191120_129](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_129.png)
 
 确实注册了2个Observer，这2个Observer监听了什么事件呢？结合下图👇分析下
 
-![Snip20191120_130](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_130.png)
+![Snip20191120_130](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_130.png)
 
 第1个Observer监听的**activities = 0x1**就是 **kCFRunLoopEntry** 事件。
 
@@ -751,7 +751,7 @@ iOS在主线程的Runloop中注册了2个Observer：
 
 如下图所示：
 
-![Snip20191120_131](/Users/Brooks/blog/blogs/OC/内存管理/Snip20191120_131.png)
+![Snip20191120_131](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/Snip20191120_131.png)
 
 请通过上述方式、自行验证各种监听的事件发生时：最终调用的objc_autoreleasePoolPush() 和objc_autoreleasePoolPop() 的情况。
 

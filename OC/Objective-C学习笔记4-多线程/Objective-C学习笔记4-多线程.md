@@ -6,7 +6,7 @@
 
 ## iOS中常见的多线程方案
 
-![Snip20191119_92](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_92.png)
+![Snip20191119_92](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_92.png)
 
 ### pthread
 
@@ -87,7 +87,7 @@ GCD的队列可以分为2大类型：
 
 ##### 各种队列执行的效果
 
-![Snip20191119_93](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_93.png)
+![Snip20191119_93](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_93.png)
 
 注意：使用sync函数往**当前*串行***队列中添加任务，会卡住当前的串行队列（产生死锁），比如：
 
@@ -228,7 +228,7 @@ OSSpinLock叫做”自旋锁”，等待锁的线程会处于忙等（busy-wait�
 
 如下：
 
-![Snip20191119_95](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_95.png)
+![Snip20191119_95](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_95.png)
 
 
 
@@ -242,7 +242,7 @@ os_unfair_lock用于取代不安全的OSSpinLock ，从iOS10开始才支持。
 
 如下：
 
-![Snip20191119_96](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_96.png)
+![Snip20191119_96](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_96.png)
 
 
 
@@ -254,7 +254,7 @@ mutex叫做”互斥锁”，等待锁的线程会处于休眠状态。
 
 如下：
 
-![Snip20191119_98](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_98.png)
+![Snip20191119_98](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_98.png)
 
 
 
@@ -266,7 +266,7 @@ mutex叫做”互斥锁”，等待锁的线程会处于休眠状态。
 
 如下：
 
-![Snip20191119_99](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_99.png)
+![Snip20191119_99](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_99.png)
 
 
 
@@ -274,7 +274,7 @@ mutex叫做”互斥锁”，等待锁的线程会处于休眠状态。
 
 如下：
 
-![Snip20191119_100](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_100.png)
+![Snip20191119_100](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_100.png)
 
 
 
@@ -284,7 +284,7 @@ mutex叫做”互斥锁”，等待锁的线程会处于休眠状态。
 
 如下：
 
-![Snip20191119_101](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_101.png)
+![Snip20191119_101](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_101.png)
 
 
 
@@ -300,7 +300,7 @@ mutex叫做”互斥锁”，等待锁的线程会处于休眠状态。
 
 如下：
 
-![Snip20191119_102](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_102.png)
+![Snip20191119_102](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_102.png)
 
 
 
@@ -310,7 +310,7 @@ mutex叫做”互斥锁”，等待锁的线程会处于休眠状态。
 
 如下：
 
-![Snip20191119_104](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_104.png)
+![Snip20191119_104](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_104.png)
 
 
 
@@ -323,7 +323,7 @@ semaphore叫做“信号量”。
 
 如下：
 
-![Snip20191119_105](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_105.png)
+![Snip20191119_105](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_105.png)
 
 
 
@@ -333,7 +333,7 @@ semaphore叫做“信号量”。
 
 如下：
 
-![Snip20191119_106](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_106.png)
+![Snip20191119_106](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_106.png)
 
 
 
@@ -345,7 +345,7 @@ semaphore叫做“信号量”。
 
 如下：
 
-![Snip20191119_107](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_107.png)
+![Snip20191119_107](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_107.png)
 
 
 
@@ -482,7 +482,7 @@ class mutex_tt : nocopy_t {
 
 使用如下：
 
-![Snip20191119_108](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_108.png)
+![Snip20191119_108](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_108.png)
 
 
 
@@ -497,8 +497,8 @@ class mutex_tt : nocopy_t {
 
 使用如下：
 
-![Snip20191119_109](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_109.png)
+![Snip20191119_109](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_109.png)
 
 如下图所示：
 
-![Snip20191119_110](/Users/Brooks/blog/blogs/OC/多线程/Snip20191119_110.png)
+![Snip20191119_110](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04-%E5%A4%9A%E7%BA%BF%E7%A8%8B/Snip20191119_110.png)

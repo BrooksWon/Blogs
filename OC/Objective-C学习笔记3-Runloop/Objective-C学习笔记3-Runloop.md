@@ -31,7 +31,7 @@ NSRunLoop和CFRunLoopRef都代表着RunLoop对象；NSRunLoop是基于CFRunLoopR
 
 如下图所示：
 
-<img src="/Users/Brooks/blog/blogs/OC/runloop/Snip20191118_85.png" alt="Snip20191118_85" style="zoom:50%;" />
+<img src="https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-Runloop/Snip20191118_85.png" alt="Snip20191118_85" style="zoom:50%;" />
 
 CFRunLoopRef是开源的，*源码地址：https://opensource.apple.com/tarballs/CF/* 。
 
@@ -67,11 +67,11 @@ Core Foundation中关于RunLoop的5个类：
 
 - CFRunLoopRef //runloop类
 
-![Snip20191118_81](/Users/Brooks/blog/blogs/OC/runloop/Snip20191118_81.png)
+![Snip20191118_81](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-Runloop/Snip20191118_81.png)
 
 - CFRunLoopModeRef //runloop的model类
 
-![Snip20191118_82](/Users/Brooks/blog/blogs/OC/runloop/Snip20191118_82.png)
+![Snip20191118_82](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-Runloop/Snip20191118_82.png)
 
 - **CFRunLoopSourceRef**
 
@@ -135,7 +135,7 @@ struct __CFRunLoopObserver {
 
 其中这几个类的关系，如下图所示：
 
-![Snip20191118_83](/Users/Brooks/blog/blogs/OC/runloop/Snip20191118_83.png)
+![Snip20191118_83](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-Runloop/Snip20191118_83.png)
 
 
 
@@ -164,7 +164,7 @@ CFRunLoopModeRef代表RunLoop的运行模式。
 
 #### Runloop状态的种类
 
-![Snip20191118_84](/Users/Brooks/blog/blogs/OC/runloop/Snip20191118_84.png)
+![Snip20191118_84](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-Runloop/Snip20191118_84.png)
 
 
 
@@ -210,7 +210,7 @@ CFRelease(observer);
 
 先看一张经典的网图
 
-![Snip20191118_86](/Users/Brooks/blog/blogs/OC/runloop/Snip20191118_86.png)
+![Snip20191118_86](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-Runloop/Snip20191118_86.png)
 
 
 
@@ -423,11 +423,11 @@ static int32_t __CFRunLoopRun(CFRunLoopRef rl, CFRunLoopModeRef rlm, CFTimeInter
 
 上面👆根据源码分析了一边runloop的运行逻辑，接下来通过下面👇详细的runloop运行逻辑图再来梳理下：
 
-![Snip20191118_87](/Users/Brooks/blog/blogs/OC/runloop/Snip20191118_87.png)
+![Snip20191118_87](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-Runloop/Snip20191118_87.png)
 
 上图流程的文字说明如下：
 
-![Snip20191118_88](/Users/Brooks/blog/blogs/OC/runloop/Snip20191118_88.png)
+![Snip20191118_88](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-Runloop/Snip20191118_88.png)
 
 
 
@@ -445,7 +445,7 @@ static int32_t __CFRunLoopRun(CFRunLoopRef rl, CFRunLoopModeRef rlm, CFTimeInter
 
 休眠原理如下图所示：
 
-![Snip20191119_90](/Users/Brooks/blog/blogs/OC/runloop/Snip20191119_90.png)
+![Snip20191119_90](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03-Runloop/Snip20191119_90.png)
 
 ## 应用举例
 

@@ -21,17 +21,17 @@
 
 ### 屏幕成像原理
 
-![Snip20191121_132](/Users/Brooks/blog/blogs/OC/性能优化/Snip20191121_132.png)
+![Snip20191121_132](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/Snip20191121_132.png)
 
 
 
-![Snip20191121_133](/Users/Brooks/blog/blogs/OC/性能优化/Snip20191121_133.png)
+![Snip20191121_133](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/Snip20191121_133.png)
 
 
 
 ### 卡顿产生的原因
 
-![Snip20191121_135](/Users/Brooks/blog/blogs/OC/性能优化/Snip20191121_135.png)
+![Snip20191121_135](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/Snip20191121_135.png)
 
 卡顿解决的主要思路：尽可能减少CPU、GPU资源消耗。按照60FPS的刷帧率，每隔16.7ms就会有一次VSync信号。
 
@@ -160,7 +160,7 @@ APP的冷启动可以概括为3大阶段：
 
 如下如所示：
 
-![Snip20191121_136](/Users/Brooks/blog/blogs/OC/性能优化/Snip20191121_136.png)
+![Snip20191121_136](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/Snip20191121_136.png)
 
 
 
@@ -267,7 +267,7 @@ app的启动优化可以根据不同的阶段做不同的事情：
 
 生成LinkMap文件，可以查看可执行文件的具体组成。设置方式如下图：
 
-![Snip20191121_137](/Users/Brooks/blog/blogs/OC/性能优化/Snip20191121_137.png)
+![Snip20191121_137](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/Snip20191121_137.png)
 
 生成LinkMap文件之后，可借助第三方工具解析LinkMap文件： https://github.com/huanxsd/LinkMap
 
