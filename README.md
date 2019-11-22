@@ -7,8 +7,12 @@
 
 ## 语言
 ### Objective-C
-1. [读《Effective Objective-C》](https://github.com/BrooksWon/Blogs/tree/master/books/%E3%80%8AEffective%20Objective-C%E3%80%8B)
-2. [读《Objective-C 高级编程》](https://github.com/BrooksWon/Blogs/tree/master/books/%E3%80%8AObjective-C%20%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E3%80%8B)
+1. [Objectvie-C学习笔记1-KVO:KVC:Category:关联对象:Block](https://github.com/BrooksWon/Blogs/tree/master/OC/Objectvie-C学习笔记1-KVO:KVC:Category:关联对象:Block)
+2. [Objective-C学习笔记2-Runtime](https://github.com/BrooksWon/Blogs/tree/master/OC/Objective-C学习笔记2-Runtime)
+3. [Objective-C学习笔记3-Runloop](https://github.com/BrooksWon/Blogs/tree/master/OC/Objective-C学习笔记3-Runloop)
+4. [Objective-C学习笔记4-多线程](https://github.com/BrooksWon/Blogs/tree/master/OC/Objective-C学习笔记4-多线程)
+5. [Objectvie-C学习笔记5-内存管理](https://github.com/BrooksWon/Blogs/tree/master/OC/Objectvie-C学习笔记5-内存管理)
+6. [Objectvie-C学习笔记6-性能优化](https://github.com/BrooksWon/Blogs/tree/master/OC/Objectvie-C学习笔记6-性能优化)
 
 ### Swift
 1. [Swift学习笔记1](https://github.com/BrooksWon/Blogs/blob/master/swift/Swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01.md)
@@ -20,7 +24,7 @@
 
 ## 工程开发
 
-1. [在iOS Category重写原类方法中调用原类方法](https://github.com/BrooksWon/Blogs/blob/master/dev/%E5%9C%A8iOS%20Category%E9%87%8D%E5%86%99%E5%8E%9F%E7%B1%BB%E6%96%B9%E6%B3%95%E4%B8%AD%E8%B0%83%E7%94%A8%E5%8E%9F%E7%B1%BB%E6%96%B9%E6%B3%95t.md)
+1. [MVX小栗子.md](https://github.com/BrooksWon/Blogs/blob/master/dev/MVX小栗子/MVX小栗子.md)
 2. [APP组件化设计](https://github.com/BrooksWon/Blogs/blob/master/dev/APP%E7%BB%84%E4%BB%B6%E5%8C%96%E8%AE%BE%E8%AE%A1.md)
 3. [Cocoapods 私有库制作](https://github.com/BrooksWon/Blogs/blob/master/dev/Cocoapods%20%E7%A7%81%E6%9C%89%E5%BA%93%E5%88%B6%E4%BD%9C.md)
 4. [利用fastlane脚本化发布CocoaPods私有化组件](https://github.com/BrooksWon/Blogs/blob/master/dev/%E5%88%A9%E7%94%A8fastlane%E8%84%9A%E6%9C%AC%E5%8C%96%E5%8F%91%E5%B8%83CocoaPods%E7%A7%81%E6%9C%89%E5%8C%96%E7%BB%84%E4%BB%B6.md)
