@@ -22,7 +22,7 @@ GNUstep是GNU计划的项目之一，它将Cocoa的OC库重新开源实现了一
 
 - 我们平时编写的Objective-C代码，底层实现其实都是C\C++代码。如下图：
 
-![Snip20191111_1](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_1.png)
+![Snip20191111_1](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_1.png)
 
 - 所以Objective-C的面向对象都是基于C\C++的数据结构实现的，Objective-C的对象、类主要是基于C\C++的结构体实现的。
 
@@ -61,7 +61,7 @@ GNUstep是GNU计划的项目之一，它将Cocoa的OC库重新开源实现了一
 
  那么、obj里面存储的显然是NSObject_IMPL结构体的内存地址，也就是isa的内存地址。下图可证明该结论。
 
-![Snip20191111_2](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_2.png)
+![Snip20191111_2](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_2.png)
 
 
 
@@ -98,11 +98,11 @@ struct Person_IMPL *p2 = (__bridge struct Person_IMPL *)p;
 
 可以将结构体Person_IMPL的成员值打印一下。如下图：
 
-![Snip20191111_4](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_4.png)
+![Snip20191111_4](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_4.png)
 
 或者、通过VIew Memory窥探一下内存状态。如下图：
 
-![Snip20191111_5](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_5.png)
+![Snip20191111_5](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_5.png)
 
  
 
@@ -132,7 +132,7 @@ malloc_size((__bridge const void *)obj);
 
 举例：Student继承Person，Person继承NSObject。clang rewrite 之后关系图如下：
 
-![Snip20191111_14](file:///Users/Brooks/blog/blogs/OC/OC%E8%AF%AD%E6%B3%95/Snip20191111_14.png?lastModify=1573456704)
+![Snip20191111_14](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_14.png)
 
 从上图可以分析出：（内存分配是16的整数倍）
 
@@ -211,7 +211,7 @@ p2->_age = 4;
 
 上面代码对应的内存结构，如下图所示：
 
-![Snip20191111_15](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_15.png)
+![Snip20191111_15](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_15.png)
 
 
 
@@ -242,7 +242,7 @@ NSLog(@"%p %p %p %p %p",
 
 下图可证明：
 
-![Snip20191111_16](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_18.png)
+![Snip20191111_16](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_18.png)
 
 从图中可以看出，objectClass1 ~ objectClass5的指针都指向同一块内存空间 `0x00007fff91851140`。这块内存空间存储的就是NSObject的类对象。
 
@@ -260,7 +260,7 @@ NSLog(@"%p %p %p %p %p",
 
  如下图所示：
 
-![Snip20191111_17](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_17.png)
+![Snip20191111_17](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_17.png)
 
 
 
@@ -290,7 +290,7 @@ NSLog(@"%p %p", objectMetaClass1, objectMetaClass2);
 
  如下图所示：
 
-![Snip20191111_19](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_19.png)
+![Snip20191111_19](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_19.png)
 
 ### 注意
 
@@ -317,7 +317,7 @@ NSLog(@"%@ %@", @(result1), @(result2));
 
 直接看下图：
 
-![Snip20191111_20](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_21.png)
+![Snip20191111_20](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_21.png)
 
 - instance的isa指向class。
   - 当调用**对象方法**时，通过instance的isa找到class，最后找到对象方法的实现进行调用。
@@ -335,7 +335,7 @@ NSLog(@"%@ %@", @(result1), @(result2));
 @interface Student: Person
 ```
 
-![Snip20191111_22](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_22.png)
+![Snip20191111_22](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_22.png)
 
 - 当Student的instance对象要调用**Person的对象方法**时，会先通过isa找到Student的class，然后通过superclass找到Person的class，最后找到对象方法的实现进行调用。
 
@@ -350,7 +350,7 @@ NSLog(@"%@ %@", @(result1), @(result2));
 @interface Student: Person
 ```
 
-![](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_23.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_23.png)
 
 - 当Student的class要调用**Person的类方法**时，会先通过isa找到Student的meta-class，然后通过superclass找到Person的meta-class，最后找到类方法的实现进行调用。
 
@@ -359,7 +359,7 @@ NSLog(@"%@ %@", @(result1), @(result2));
 ### isa、superclass总结
 
 直接看下图：
-![image-20191111175520151](/Users/Brooks/blog/blogs/OC/OC语法/image-20191111175520151.png)
+![image-20191111175520151](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/image-20191111175520151.png)
 
 
 
@@ -402,7 +402,7 @@ objc源码地址： https://opensource.apple.com/tarballs/objc4/
 
 如下图：
 
-![](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_24.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_24.png)
 
 
 
@@ -410,7 +410,7 @@ objc源码地址： https://opensource.apple.com/tarballs/objc4/
 
 如下图：
 
-![Snip20191111_26](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_26.png)
+![Snip20191111_26](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_26.png)
 
 
 
@@ -418,7 +418,7 @@ objc源码地址： https://opensource.apple.com/tarballs/objc4/
 
 可以在objc源码的objc-runtinme-new.h文件中梳理出 **struct  objc_class** 结构图。如下所示：
 
-![Snip20191111_27](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191111_28.png)
+![Snip20191111_27](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191111_28.png)
 
 后面会继续深入源码分析一下isa、class_rw_t、method_list_t、method_t、class_ro_t等结构~。
 
@@ -493,13 +493,13 @@ KVO的全称是Key-Value Observing，俗称“键值监听”，可以用于监�
 
 流程如下图所示：
 
-![Snip20191112_30](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191112_30.png)
+![Snip20191112_30](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191112_30.png)
 
 ### KVO的本质
 
 - 上述的示例中，person2未使用KVO，当person2调用setAge时：通过person2的isa找到Person的class对象，然后找到class对象中的setAge方法完成调用；当person2调用age的getter方法时也是如此。如下图所示：
 
-![Snip20191112_31](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191112_31.png)
+![Snip20191112_31](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191112_31.png)
 
 - 上述的示例中，person1使用了KVO监听自己age属性的变化：因此、**系统会利用Runtime API动态生成一个Person的子类NSKVONotifying_Person，并且让person1的isa指向这个全新的子类**。该类NSKVONotifying_Person 重写了父类Person的setAge方法、具体实现伪代码如下：
 
@@ -530,7 +530,7 @@ void _NSSetIntValueAndNotify()
 
 上述的示例中，当person1调用setAge时：通过person1的isa找到**NSKVONotifying_Person**的class对象（使用了KVO之后，person1的isa已经指向**NSKVONotifying_Person**的类对象了、而不是之前的Person的类对象），然后找到class对象中的setAge方法（该方法会调用Foundation的_NSSetIntValueAndNotify函数，从而出发KVO回调函数）、完成调用。如下图所示：
 
-![](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191112_34.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191112_34.png)
 
 备注：**NSKVONotifying_Person** 也会重写父类的一些其他方法做些必要的事情。比如: 重写class方法，用来隐藏KVO生成子类这件事情，重写dealloc方法、做一些资源释放相关的事情。等等。
 
@@ -590,7 +590,7 @@ NSLog(@"%@", [person valueForKeyPath:@"cat.weight"]);
 
 当使用KVC调用`setValue: forKey：`方法设值时，实际调用流程如下图：
 
-![Snip20191112_37](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191112_37.png)
+![Snip20191112_37](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191112_37.png)
 
 注意：图中 `accessInstanceVariablesDirectly` 是NSObject中的方法，默认返回YES。意思是：是否允许直接访问没有getter、setter方法的成员变量。
 
@@ -607,7 +607,7 @@ NSLog(@"%@", [person valueForKeyPath:@"cat.weight"]);
 
 当使用KVC调用`valueForKey:`方法取值时，实际调用流程如下图：
 
-![Snip20191112_39](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191112_39.png)
+![Snip20191112_39](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191112_39.png)
 
 
 
@@ -1370,7 +1370,7 @@ objc_getAssociatedObject(obj, @selector(getter))
 
 ### objc_AssociationPolicy
 
-![Snip20191112_40](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191112_40.png)
+![Snip20191112_40](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191112_40.png)
 
 
 
@@ -1467,7 +1467,7 @@ class ObjcAssociation {
 
 这几个类的关系如下图：
 
-![Snip20191112_41](/Users/Brooks/blog/blogs/OC/OC语法/OC语法.png)
+![Snip20191112_41](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/OC%E8%AF%AD%E6%B3%95.png)
 
 如上图所示：
 
@@ -1498,7 +1498,7 @@ class ObjcAssociation {
 
 block的底层结构如下图所示：
 
-![Snip20191114_48](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_48.png)
+![Snip20191114_48](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_48.png)
 
 ### Block变量捕获
 
@@ -1506,7 +1506,7 @@ block的底层结构如下图所示：
 
 如下图所示：
 
-![Snip20191114_49](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_49.png)
+![Snip20191114_49](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_49.png)
 
 下面具体分析一下各种变量类型的捕获~
 
@@ -1561,7 +1561,7 @@ static struct __main_block_desc_0 {
 
 那么，很明显能看出这3个结构之间的关系，如下：
 
-![Snip20191114_50](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_50.png)
+![Snip20191114_50](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_50.png)
 
 从上面关系图可以得出：咱们示例代码中定义的**block中最终结构包含了：isa、FuncPtr（block被包成函数之后的函数指针）、age（被捕获的auto变量）、Block_size等内容**。并且从`struct __main_block_impl_0`的构造函数
 
@@ -1726,15 +1726,15 @@ block有3种类型，可以通过调用class方法或者isa指针查看具体类
 
 这3种类型对应的内存区域是：
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_51.png" alt="Snip20191114_51" style="zoom:67%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_51.png)
 
 这3中类型和环境的关系如下：
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_54.png" style="zoom:67%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_54.png)
 
 每一种类型的block调用copy后的结果如下所示
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_53.png" alt="Snip20191114_53" style="zoom:67%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_53.png)
 
 
 
@@ -1763,7 +1763,7 @@ block有3种类型，可以通过调用class方法或者isa指针查看具体类
   2. dispose函数内部会调用_Block_object_dispose函数；
   3. _Block_object_dispose函数会自动释放引用的auto变量（release）。
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_56.png" alt="Snip20191114_56" style="zoom: 50%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_56.png)
 
 
 
@@ -1892,7 +1892,7 @@ int main(int argc, const char * argv[]) {
 
  从上面代码的注释可以得出：__strong修饰的对象类型的auto变量被堆上的block强引用了。可以带过下面的打印记过看出来
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_57.png" alt="Snip20191114_57" style="zoom: 50%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_57.png)
 
 在断点处并为打印anyone的dealloc方法，说明anyone还有强引用在。其实就是被block强引用了。
 
@@ -1925,7 +1925,7 @@ int main(int argc, const char * argv[]) {
 
 结论是：不会被强引用。看下图：
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_58.png" alt="Snip20191114_58" style="zoom:50%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_58.png)
 
 
 
@@ -1956,7 +1956,7 @@ int main(int argc, const char * argv[]) {
 
 结论是：不会被强引用。看下图：
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_59.png" alt="Snip20191114_59" style="zoom:50%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_59.png)
 
 上个几个示例证明了我们最开始的总结：被copy到堆上的block、会根据对象类型auto变量的修饰符（`__strong`、`__weak`、`__unsafe_unretained`）做出相应的操作，形成强引用（retain）或者弱引用。
 
@@ -2037,7 +2037,7 @@ int main(int argc, const char * argv[]) {
 
 上面代码中main函数中的age指针和__Block_byref_age_0结构体的关系图如下：
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_60.png" alt="Snip20191114_60" style="zoom:50%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_60.png)
 
 至此、上面的结论得以证明。（编译器确实会将**__block变量**包装成一个对象）
 
@@ -2116,7 +2116,7 @@ age->__forwarding->age//通过栈上指针最终访问到的是栈上的age
 
 如下图所示：
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_61.png" alt="Snip20191114_61" style="zoom: 50%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_61.png)
 
 
 
@@ -2146,7 +2146,7 @@ age->__forwarding->age//通过栈上指针最终访问到的是栈上的age
 
 如下图所示：
 
-![Snip20191114_62](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_62.png)
+![Snip20191114_62](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_62.png)
 
 
 
@@ -2160,7 +2160,7 @@ age->__forwarding->age//通过栈上指针最终访问到的是栈上的age
 
 如下图所示：
 
-![Snip20191114_63](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_63.png)
+![Snip20191114_63](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_63.png)
 
 ### 
 
@@ -2202,7 +2202,7 @@ age->__forwarding->age//通过栈上指针最终访问到的是栈上的age
 
 如下图所示：
 
-![Snip20191114_64](/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_64.png)
+![Snip20191114_64](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_64.png)
 
 
 
@@ -2210,11 +2210,13 @@ age->__forwarding->age//通过栈上指针最终访问到的是栈上的age
 
 block容易造成循环引用问题，如下图所示：
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_65.png" alt="Snip20191114_65" style="zoom: 33%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_65.png)
 
 或者
 
-<img src="/Users/Brooks/blog/blogs/OC/OC语法/Snip20191114_66.png" alt="Snip20191114_66" style="zoom:50%;" />
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-KVO:KVC:Category:%E5%85%B3%E8%81%94%E5%AF%B9%E8%B1%A1:Block/Snip20191114_66.png)
+
+
 
 那么，怎么解决循环引用问题呢？
 
