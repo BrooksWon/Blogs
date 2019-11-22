@@ -92,7 +92,7 @@ union isa_t
 
 ## Class的结构
 
-![Snip20191118_67](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_67.png)
+![Snip20191118_67](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_67.png)
 
 
 
@@ -102,7 +102,7 @@ union isa_t
 
 如下图所示：
 
-![Snip20191118_69](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_69.png)
+![Snip20191118_69](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_69.png)
 
 
 
@@ -112,7 +112,7 @@ union isa_t
 
 如下图所示：
 
-![Snip20191118_70](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_70.png)
+![Snip20191118_70](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_70.png)
 
 
 
@@ -120,30 +120,30 @@ union isa_t
 
 method_t是对方法\函数的封装。如下图所示：
 
-<img src="/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_71.png" alt="Snip20191118_71" style="zoom:67%;" />
+<img src="https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_71.png" alt="Snip20191118_71" style="zoom:67%;" />
 
 - IMP代表函数的具体实现。
 
-![Snip20191118_72](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_72.png)
+![Snip20191118_72](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_72.png)
 
 - SEL代表方法\函数名，一般叫做选择器，底层结构跟char *类似。
   - 可以通过@selector()和sel_registerName()获得；
   - 可以通过sel_getName()和NSStringFromSelector()转成字符串；
   - 不同类中相同名字的方法，所对应的方法选择器是相同的。
 
-![](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_73_01.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_73_01.png)
 
 
 
 - types包含了函数返回值、参数编码的字符串。
 
-![Snip20191118_74](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_74.png)
+![Snip20191118_74](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_74.png)
 
 
 
 关于类型编码（**Type Encoding**），iOS中提供了一个叫做@encode的指令，可以将具体的类型表示成字符串编码。如下图所示：
 
-![Snip20191118_75](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_75.png)
+![Snip20191118_75](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_75.png)
 
 *参考链接：https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html#//apple_ref/doc/uid/TP40008048-CH100-SW1*
 
@@ -155,7 +155,7 @@ Class内部结构中有个方法缓存（cache_t），用**散列表（哈希表
 
 如下图所示：
 
-![Snip20191118_76](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_76.png)
+![Snip20191118_76](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_76.png)
 
 缓存查找过程：将SEL作为key，根据哈希算法（ **index = hash(key & mask)** ）生成一个索引（index），然后使用该索引去_buckets数组中取对应的IMP。其中更多细节可以查看objc-cache.mm。
 
@@ -185,7 +185,7 @@ OC中的方法调用，其实都是转换为objc_msgSend函数的调用。objc_m
 
 
 
-![Snip20191118_77](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_77.png)
+![Snip20191118_77](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_77.png)
 
 
 
@@ -193,7 +193,7 @@ OC中的方法调用，其实都是转换为objc_msgSend函数的调用。objc_m
 
 #### 流程图
 
-![Snip20191118_78](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_78.png)
+![Snip20191118_78](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_78.png)
 
 
 
@@ -257,7 +257,7 @@ void test(id self, SEL _cmd)
 
 #### 流程图
 
-![Snip20191118_79](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_79.png)
+![Snip20191118_79](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_79.png)
 
 
 
@@ -328,7 +328,7 @@ super调用，底层会转换为objc_msgSendSuper2函数的调用，接收2个�
 
 objc_super2的结构定义如下：
 
-![Snip20191118_80](/Users/Brooks/blog/blogs/OC/runtime/Snip20191118_80.png)
+![Snip20191118_80](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_80.png)
 
 - receiver是消息接收者；
 - current_class是receiver的Class对象。
