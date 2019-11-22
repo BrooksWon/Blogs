@@ -7,12 +7,12 @@
 
 ## 语言
 ### Objective-C
-1. [Objectvie-C学习笔记1-KVO:KVC:Category:关联对象:Block](https://github.com/BrooksWon/Blogs/tree/master/OC/Objectvie-C学习笔记1-KVO:KVC:Category:关联对象:Block)
-2. [Objective-C学习笔记2-Runtime](https://github.com/BrooksWon/Blogs/tree/master/OC/Objective-C学习笔记2-Runtime)
-3. [Objective-C学习笔记3-Runloop](https://github.com/BrooksWon/Blogs/tree/master/OC/Objective-C学习笔记3-Runloop)
-4. [Objective-C学习笔记4-多线程](https://github.com/BrooksWon/Blogs/tree/master/OC/Objective-C学习笔记4-多线程)
-5. [Objectvie-C学习笔记5-内存管理](https://github.com/BrooksWon/Blogs/tree/master/OC/Objectvie-C学习笔记5-内存管理)
-6. [Objectvie-C学习笔记6-性能优化](https://github.com/BrooksWon/Blogs/tree/master/OC/Objectvie-C学习笔记6-性能优化)
+1. [Objectvie-C学习笔记1-KVO:KVC:Category:关联对象:Block.md](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C学习笔记1-KVO:KVC:Category:关联对象:Block/Objectvie-C学习笔记1-KVO:KVC:Category:关联对象:Block.md)
+2. [Objective-C学习笔记2-Runtime.md](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C学习笔记2-Runtime/Objective-C学习笔记2-Runtime.md)
+3. [Objective-C学习笔记3-Runloop.md](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C学习笔记3-Runloop/Objective-C学习笔记3-Runloop.md)
+4. [Objective-C学习笔记4-多线程.md](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C学习笔记4-多线程/Objective-C学习笔记4-多线程.md)
+5. [Objectvie-C学习笔记5-内存管理.md](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C学习笔记5-内存管理/Objectvie-C学习笔记5-内存管理.md)
+6. [Objectvie-C学习笔记6-性能优化.md](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C学习笔记6-性能优化/Objectvie-C学习笔记6-性能优化.md)
 
 ### Swift
 1. [Swift学习笔记1](https://github.com/BrooksWon/Blogs/blob/master/swift/Swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01.md)
