@@ -285,4 +285,4 @@ RAC(_label,text) = self.textField.rac_textSignal;
 
 
 
-参考链接：https://www.jianshu.com/p/d7d951a99db8
+参考链接：https://halfrost.com/reactivecocoa_racsignal_operations3/
