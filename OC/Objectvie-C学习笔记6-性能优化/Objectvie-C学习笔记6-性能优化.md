@@ -90,6 +90,8 @@
 - 阴影，layer.shadowXXX
   - 如果设置了layer.shadowPath就不会产生离屏渲染。
 
+最后附一张屏幕成像原理详细图
+![屏幕成像原理详细图](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E5%B1%8F%E5%B9%95%E6%98%BE%E7%A4%BA%E5%9B%BE%E5%83%8F%E5%8E%9F%E7%90%86.png)
 
 
 ## 耗电量优化
