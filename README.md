@@ -9,6 +9,7 @@
 
 1. [Mentor机制](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83%E4%B9%8BMentor%E6%9C%BA%E5%88%B6.md)
 2. [需求IO机制](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83%E4%B9%8B%E9%9C%80%E6%B1%82IO%E6%9C%BA%E5%88%B6.md)
+3. [如何成长为技术Leader](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%A6%82%E4%BD%95%E6%88%90%E9%95%BF%E4%B8%BA%E6%8A%80%E6%9C%AFLeader.md)
 
 ## 工程开发
 
