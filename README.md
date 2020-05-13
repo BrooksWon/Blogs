@@ -1,5 +1,3 @@
-# 点滴
-
 ## 一些思考
 
 1. [[BETA]产品生命周期](https://github.com/BrooksWon/Blogs/tree/master/think/product)
