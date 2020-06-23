@@ -182,8 +182,8 @@ dyld（dynamic link editor），Apple的动态链接器，可以用来装载Mach
 启动APP时，runtime所做的事情有：
 
 1. 调用map_images进行可执行文件内容的解析和处理；
-2. 在load_images中调用call_load_methods，调用所有Class和Category的+load方法；
-3. 进行各种objc结构的初始化（注册Objc类 、初始化类对象等等）；
+2. 进行各种objc结构的初始化（注册Objc类 、初始化类对象等等）；
+3. 在load_images中调用call_load_methods，调用所有Class和Category的+load方法；
 4. 调用C++静态初始化器和__attribute__((constructor))修饰的函数；
 
 经历过上述4个步骤之后：到此为止，可执行文件和动态库中所有的符号(Class，Protocol，Selector，IMP，…)都已经按格式成功加载到内存中，被runtime 所管理。
