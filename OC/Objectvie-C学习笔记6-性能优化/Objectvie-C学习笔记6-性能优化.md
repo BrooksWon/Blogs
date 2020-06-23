@@ -211,9 +211,11 @@ dyld（dynamic link editor），Apple的动态链接器，可以用来装载Mach
 
 ### app的启动优化
 
+> 详细见 https://github.com/BrooksWon/Blogs/blob/master/dev/Cold%20launch/APP%E5%86%B7%E5%90%AF%E5%8A%A8%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E5%B7%A5%E4%BD%9C%EF%BC%9F.mda
+
 app的启动优化可以根据不同的阶段做不同的事情：
 
-#### 阶段01-pdyld优化
+#### 阶段01-dyld优化
 
 - 减少动态库、合并一些动态库（定期清理不必要的动态库）。
 - 减少Objc类、分类的数量、减少Selector数量（定期清理不必要的类、分类）。
