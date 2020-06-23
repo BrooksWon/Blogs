@@ -1,6 +1,6 @@
 ### 胡思乱想
 
-- [[BETA]产品生命周期](https://github.com/BrooksWon/Blogs/tree/master/think/product)
+- [[BETA]产品生命周期](https://github.com/BrooksWon/Blogs/blob/master/think/product/README.md）
 - [[BETA]理解中台](https://github.com/BrooksWon/Blogs/blob/master/think/zhongtai/README.md)
 
 ### 管理思考
