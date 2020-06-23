@@ -2,9 +2,9 @@
 
 最近有时间，做了下梳理；APP启动时做了如下工作：
 
-![Cold launch](/Users/Brooks/blog/blog/dev/Cold launch/Cold launch.svg)
+![Cold launch](/Users/Brooks/blog/blog/dev/Cold launch/Cold launch.jpg)
 
-
+[**源文件**](https://github.com/BrooksWon/Blogs/blob/master/dev/Cold%20launch/Cold%20launch.xmind)
 
 参考链接：
 
