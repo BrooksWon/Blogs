@@ -241,6 +241,8 @@ app的启动优化可以根据不同的阶段做不同的事情：
 
 ## 安装包优化
 
+> 详细见 https://github.com/BrooksWon/Blogs/blob/master/dev/App%20Thin/App%E7%98%A6%E8%BA%AB%E6%80%9D%E8%B7%AF%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F.md
+
 ### 安装包的组成
 
 安装包（IPA）主要由可执行文件、资源组成。
@@ -274,20 +276,6 @@ app的启动优化可以根据不同的阶段做不同的事情：
 ![Snip20191121_137](https://github.com/BrooksWon/Blogs/blob/master/OC/Objectvie-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/Snip20191121_137.png)
 
 生成LinkMap文件之后，可借助第三方工具解析LinkMap文件： https://github.com/huanxsd/LinkMap
-
-
-
-**参考链接：**
-
-https://blog.cnbang.net/tech/2544/
-
-https://mp.weixin.qq.com/s/xzlFQJ2b-rrw5QIszSLXXQ
-
-https://mp.weixin.qq.com/s/J_XYpIfDeeWJBlk9sRQMAA
-
-https://mp.weixin.qq.com/s/t4EVvXJWqX-MFuVy7T-hPQ
-
-https://sq.163yun.com/blog/article/200384401846304768
 
 
 

@@ -2,11 +2,11 @@
 
 最近有时间，做了下梳理；APP瘦身思路如下脑图所示：
 
-![](https://github.com/BrooksWon/Blogs/blob/master/dev/Cold%20launch/Cold%20launch.jpg)
+![](https://github.com/BrooksWon/Blogs/blob/master/dev/App%20Thin/App%20Thin.jpg)
 
 
 
-[**源文件**](https://github.com/BrooksWon/Blogs/blob/master/dev/Cold%20launch/Cold%20launch.xmind)
+[**源文件**](https://github.com/BrooksWon/Blogs/blob/master/dev/App%20Thin/App%20Thin.xmind)
 
 参考链接：
 
