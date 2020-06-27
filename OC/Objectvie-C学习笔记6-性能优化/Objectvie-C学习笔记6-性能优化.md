@@ -277,6 +277,20 @@ app的启动优化可以根据不同的阶段做不同的事情：
 
 
 
+**参考链接：**
+
+https://blog.cnbang.net/tech/2544/
+
+https://mp.weixin.qq.com/s/xzlFQJ2b-rrw5QIszSLXXQ
+
+https://mp.weixin.qq.com/s/J_XYpIfDeeWJBlk9sRQMAA
+
+https://mp.weixin.qq.com/s/t4EVvXJWqX-MFuVy7T-hPQ
+
+https://sq.163yun.com/blog/article/200384401846304768
+
+
+
 ## 内存优化
 
 关于内存优化方向有：
