@@ -104,6 +104,14 @@ union isa_t
 
 ![Snip20191118_69](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_69.png)
 
+**2020.07.17更新：**类数据结构变化了、新的数据结构节约了内存的占用。
+
+> > > **Tips：**`class_ro_t`是只读的，存放的是编译期间就确定的字段信息；而`class_rw_t`是在 runtime 时才创建的，它会先将`class_ro_t`的内容拷贝一份，再将类的分类的属性、方法、协议等信息添加进去，之所以要这么设计是因为 Objective-C 是动态语言，你可以在运行时更改它们方法，属性等，并且分类可以在不改变类设计的前提下，将新方法添加到类中。
+> >
+> > 事实证明，`class_rw_t`会占用比`class_ro_t`占用更多的内存，在 iPhone 中，我们在系统测量了大约 30MB 的这些`class_rw_t`结构。应该如何优化这些内存呢？通过测量实际设备上的使用情况，我们发现大约 10％ 的类实际会存在动态的更改行为，如动态添加方法，使用 Category 方法等。因此，我们能可以把这部分动态的部分提取出来，我们称之为`class_rw_ext_t`
+>
+> 具体参考 https://mp.weixin.qq.com/s/iVWILcWJtlqwilo5lAufgA
+
 
 
 ### class_ro_t
@@ -146,6 +154,22 @@ method_t是对方法\函数的封装。如下图所示：
 ![Snip20191118_75](https://github.com/BrooksWon/Blogs/blob/master/OC/Objective-C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02-Runtime/Snip20191118_75.png)
 
 *参考链接：https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html#//apple_ref/doc/uid/TP40008048-CH100-SW1*
+
+
+
+**2020.07.17更新：**系统共享库方法地址的优化。
+
+> 我们知道，库的地址取决于动态链接库加载之后的位置，ASLR（Address space layout randomization 地址空间布局随机化）的存在，动态链接器需要修正真实的指针地址，这也是一种代价。由于方法实现地址不会脱离当前库的地址范围的特性存在，所以实际上，方法列表并不需要使用 64 位的寻址范围空间。他们只需要能够在自己的库地址中查找引用函数地址即可，这些函数将始终在附近。所以我们可以使用 32 位相对偏移来代替绝对 64 位地址。
+>
+> 这么做有几个优点：
+>
+> 1. 无论将库加载到内存中的任何位置，偏移量始终是相同的，因此从加载后不需要进行修正指针地址。
+> 2. 它们可以保存在只读存储器中，这会更加的安全。
+> 3. 使用 32 位偏移量在 64 位平台上所需的内存量减少了一半。在 iPhone 中我们可以节省约 40MB 的内存大小。
+>
+> 优化后，指针所需的内存占用量可以减少一半。
+>
+> 具体参考：https://mp.weixin.qq.com/s/iVWILcWJtlqwilo5lAufgA
 
 
 

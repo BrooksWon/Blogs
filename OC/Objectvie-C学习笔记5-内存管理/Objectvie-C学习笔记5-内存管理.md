@@ -309,6 +309,16 @@ void timerFire(void *param)
 
 
 
+**2020.07.17更新：**Tagged Pointer格式变化了，提高了 msgSend 性能。。
+
+> 我们使用最高位代表 Tagged Pointer 标识位，最低位 3 位标识 Tagged Pointer 的类型，接下去的位来表示包含的数据（可能包含扩展类型字段），为什么我们使用高位指示 ARM上 的 Tagged Pointer，而不是像 Intel 一样使用低位标记？
+>
+> 它实际是对 objc_msgSend 的微小优化。我们希望 msgSend 中最常用的路径尽可能快。最常用的路径表示普通对象指针。我们有两种不常见的情况：Tagged Pointer 指针和 nil。事实证明，当我们使用最高位时，可以通过一次比较来检查两者。与分别检查 nil 和 Tagged Pointer 指针相比，这会为 msgSend 中的节省了条件分支。
+>
+> 具体参考：https://mp.weixin.qq.com/s/iVWILcWJtlqwilo5lAufgA
+
+
+
 ## OC对象的内存管理
 
 在iOS中，使用引用计数来管理OC对象的内存。
