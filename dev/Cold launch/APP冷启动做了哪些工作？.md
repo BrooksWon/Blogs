@@ -20,5 +20,7 @@ https://objccn.io/issue-19-4/
 
 https://tech.meituan.com/2018/12/06/waimai-ios-optimizing-startup.html
 
+iOS系统内核XNU加载主2进制过程：https://github.com/apple/darwin-xnu/blob/master/bsd/kern/kern_exec.c
+
 
 
