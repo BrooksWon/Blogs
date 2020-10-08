@@ -4,8 +4,6 @@
 
 ![](https://github.com/BrooksWon/Blogs/blob/master/manager/%E6%8A%80%E6%9C%AFLeader.png)
 
-![]([技术Leader-人才篇.png](https://github.com/BrooksWon/Blogs/blob/master/manager/技术Leader-人才篇.png))
-
 
 
 **PM视角下的沟通**
