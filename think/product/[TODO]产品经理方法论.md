@@ -8,9 +8,9 @@
 
 
 
-![](https://github.com/BrooksWon/Blogs/blob/master/manager/%E6%8A%80%E6%9C%AFLeader-%E4%BA%BA%E6%89%8D%E7%AF%87.png)
+![](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%96%B9%E6%B3%95%E8%AE%BA.png)
 
 
 
-[源文件](https://github.com/BrooksWon/Blogs/tree/master/manager/%E6%8A%80%E6%9C%AFLeader-%E4%BA%BA%E6%89%8D%E7%AF%87.mindnode)
+[源文件](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%96%B9%E6%B3%95%E8%AE%BA.xmind)
 
