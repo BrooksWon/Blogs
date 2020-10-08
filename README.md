@@ -1,12 +1,18 @@
+# 记录📝
+
 ### 胡思乱想
 
+- 
+- [[TODO]产品经理方法论](https://github.com/BrooksWon/Blogs/blob/master/think/product/%5BTODO%5D%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%96%B9%E6%B3%95%E8%AE%BA.md)
 - [[BETA]产品生命周期](https://github.com/BrooksWon/Blogs/blob/master/think/product/README.md)
 - [[BETA]理解中台](https://github.com/BrooksWon/Blogs/blob/master/think/zhongtai/README.md)
 
 ### 管理思考
 
+- 
+- [技术Leader之人才篇](https://github.com/BrooksWon/Blogs/blob/master/manager/%E6%8A%80%E6%9C%AFLeader%E4%B9%8B%E4%BA%BA%E6%89%8D%E7%AF%87.md)
 - [如何成长为技术Leader](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%A6%82%E4%BD%95%E6%88%90%E9%95%BF%E4%B8%BA%E6%8A%80%E6%9C%AFLeader.md)
-- [需求IO机制](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83%E4%B9%8B%E9%9C%80%E6%B1%82IO%E6%9C%BA%E5%88%B6.md)
+- [怎么做个靠谱的程序员👨‍💻‍](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83%E4%B9%8B%E9%9C%80%E6%B1%82IO%E6%9C%BA%E5%88%B6.md)
 - [Mentor机制](https://github.com/BrooksWon/Blogs/blob/master/manager/%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83%E4%B9%8BMentor%E6%9C%BA%E5%88%B6.md)
 
 ### 工程开发
