@@ -3,6 +3,7 @@
 ### 胡思乱想
 
 - 
+- [反躬自省：一些辩证的生活思考](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E5%8F%8D%E8%BA%AC%E8%87%AA%E7%9C%81%EF%BC%9A%E4%B8%80%E4%BA%9B%E8%BE%A9%E8%AF%81%E7%9A%84%E7%94%9F%E6%B4%BB%E6%80%9D%E8%80%83.md)
 - [组织思考：有时生态，有时机器](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E7%BB%84%E7%BB%87%E6%80%9D%E8%80%83%EF%BC%9A%E6%9C%89%E6%97%B6%E7%94%9F%E6%80%81%EF%BC%8C%E6%9C%89%E6%97%B6%E6%9C%BA%E5%99%A8.md)
 - [反求诸己：一些辩证的自我思考](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E5%8F%8D%E6%B1%82%E8%AF%B8%E5%B7%B1%EF%BC%9A%E4%B8%80%E4%BA%9B%E8%BE%A9%E8%AF%81%E7%9A%84%E8%87%AA%E6%88%91%E6%80%9D%E8%80%83.md)
 - [[TODO]产品经理方法论](https://github.com/BrooksWon/Blogs/blob/master/think/product/%5BTODO%5D%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E6%96%B9%E6%B3%95%E8%AE%BA.md)
