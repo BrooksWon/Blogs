@@ -2,7 +2,7 @@
 
 ### 理解业务
 
-- 泡泡玛特做的是什么生意，为什么他能做成？
+- [泡泡玛特做的是什么生意，为什么他能做成？](https://github.com/BrooksWon/Blogs/blob/master/business/%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%E5%81%9A%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%E7%94%9F%E6%84%8F%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%96%E8%83%BD%E5%81%9A%E6%88%90%EF%BC%9F.md)
 
 ### 胡思乱想
 
