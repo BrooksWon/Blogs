@@ -4,9 +4,9 @@
 
 - [泡泡玛特做的是什么生意，为什么他能做成？](https://github.com/BrooksWon/Blogs/blob/master/business/%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%E5%81%9A%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%E7%94%9F%E6%84%8F%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%96%E8%83%BD%E5%81%9A%E6%88%90%EF%BC%9F.md)
 
-### 胡思乱想
+### 学习自省
 
-- 
+- [学习防呆设计](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E9%98%B2%E5%91%86%E8%AE%BE%E8%AE%A1%E5%8D%81%E5%A4%A7%E5%8E%9F%E5%88%99%E5%8F%8A%E7%BA%BF%E4%B8%8A%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90.md)
 - [反躬自省：一些辩证的生活思考](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E5%8F%8D%E8%BA%AC%E8%87%AA%E7%9C%81%EF%BC%9A%E4%B8%80%E4%BA%9B%E8%BE%A9%E8%AF%81%E7%9A%84%E7%94%9F%E6%B4%BB%E6%80%9D%E8%80%83.md)
 - [组织思考：有时生态，有时机器](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E7%BB%84%E7%BB%87%E6%80%9D%E8%80%83%EF%BC%9A%E6%9C%89%E6%97%B6%E7%94%9F%E6%80%81%EF%BC%8C%E6%9C%89%E6%97%B6%E6%9C%BA%E5%99%A8.md)
 - [反求诸己：一些辩证的自我思考](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E5%8F%8D%E6%B1%82%E8%AF%B8%E5%B7%B1%EF%BC%9A%E4%B8%80%E4%BA%9B%E8%BE%A9%E8%AF%81%E7%9A%84%E8%87%AA%E6%88%91%E6%80%9D%E8%80%83.md)
