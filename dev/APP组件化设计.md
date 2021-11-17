@@ -43,7 +43,7 @@ BTModuleManager 用于管理模块配置文件读取和解析，同时，根据�
 
 
 
-![iOSç"ä"¶åè®¾è®¡å¾ä¾.png](https://github.com/BrooksWon/brookswon.github.io/blob/master/_posts/iOS%E7%BB%84%E4%BB%B6%E5%8C%96%E8%AE%BE%E8%AE%A1%E5%9B%BE%E4%BE%8B.png?raw=true)
+![](https://github.com/BrooksWon/Blogs/blob/master/dev/iOS%E7%BB%84%E4%BB%B6%E5%8C%96%E8%AE%BE%E8%AE%A1%E5%9B%BE%E4%BE%8B.png)
 
 
 
@@ -114,7 +114,7 @@ BTModuleManager 用于管理模块配置文件读取和解析，同时，根据�
 
 
 
-![urlè§å.png](https://github.com/BrooksWon/brookswon.github.io/blob/master/_posts/url%E8%A7%84%E5%88%99.png?raw=true)
+![](https://github.com/BrooksWon/Blogs/blob/master/dev/url%E8%A7%84%E5%88%99.png)
 
 
 
@@ -155,5 +155,4 @@ BTModuleManager 用于管理模块配置文件读取和解析，同时，根据�
 
 ## 11.更新
 [iOS组件化开发中的路由，服务解耦方案- dmeo](https://github.com/BrooksWon/FerryMan)
-
 
