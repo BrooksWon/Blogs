@@ -10,6 +10,7 @@
 ### 学习自省
 
 - 
+- 
 - [【思考&自省】道-法-术-器-势-志](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E3%80%90%E6%80%9D%E8%80%83%26%E8%87%AA%E7%9C%81%E3%80%91%E9%81%93-%E6%B3%95-%E6%9C%AF-%E5%99%A8-%E5%8A%BF-%E5%BF%97.md)
 - [社交软件已读功能分析](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E7%A4%BE%E4%BA%A4%E8%BD%AF%E4%BB%B6%E5%B7%B2%E8%AF%BB%E5%8A%9F%E8%83%BD%E5%88%86%E6%9E%90.md)
 - [【持续努力】争取成为一名合格的商业产品经理](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E3%80%90%E6%8C%81%E7%BB%AD%E5%8A%AA%E5%8A%9B%E3%80%91%E2%80%94%20%E4%BA%89%E5%8F%96%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E5%90%88%E6%A0%BC%E7%9A%84%E5%95%86%E4%B8%9A%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86.md)
