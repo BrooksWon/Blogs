@@ -630,7 +630,7 @@ func main() {
 程序的初始化和执行都起始于 main package 包，并且 main() 函数只能在 man 包中，一个项目里也只能有一个 main package。一个 go 程序文件中可以有一个 init()，一个项目中可以有 n 个 init() 函数。
  程序包引入执行步骤：
 
-![img](https:////upload-images.jianshu.io/upload_images/3005871-a3b157a903e65bc1.png?imageMogr2/auto-orient/strip|imageView2/2/w/948/format/webp)
+![img](https://github.com/BrooksWon/Blogs/blob/master/golang/%E7%A8%8B%E5%BA%8F%E5%8C%85%E5%BC%95%E5%85%A5%E6%89%A7%E8%A1%8C%E6%AD%A5%E9%AA%A4.webp)
 
 程序文件执行步骤
 
