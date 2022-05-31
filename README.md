@@ -3,6 +3,7 @@
 ### 理解业务
 
 - 
+- 学习【瑞幸的增长方法论】
 - [思考【市场调研】](https://github.com/BrooksWon/Blogs/blob/master/business/%E5%B8%82%E5%9C%BA%E8%B0%83%E7%A0%94.md)
 - [如何快速理解业务？](https://github.com/BrooksWon/Blogs/blob/master/think/product/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E7%90%86%E8%A7%A3%E4%B8%9A%E5%8A%A1%EF%BC%9F.md)
 - [泡泡玛特做的是什么生意，为什么他能做成？](https://github.com/BrooksWon/Blogs/blob/master/business/%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%E5%81%9A%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%E7%94%9F%E6%84%8F%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%96%E8%83%BD%E5%81%9A%E6%88%90%EF%BC%9F.md)
@@ -81,3 +82,4 @@
 ### 算法
 
 - [10大经典排序算法和7大查找算法](https://github.com/BrooksWon/Blogs/blob/master/algorithm/README.md)
+
